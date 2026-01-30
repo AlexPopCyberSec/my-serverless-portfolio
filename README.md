@@ -1,43 +1,42 @@
-# Astro Starter Kit: Minimal
+# 🛡️ Alex Popov | CyberSec & IT Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+![System Status](https://img.shields.io/badge/System_Status-ONLINE-success?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Cloudflare_Protected-orange?style=for-the-badge)
+![Deployment](https://img.shields.io/badge/Deployed_on-Cloudflare_Edge-f38020?style=for-the-badge)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 About The Project
 
-## 🚀 Project Structure
+This is not a WordPress template. This is a **high-performance, serverless portfolio** built from scratch to demonstrate modern web architecture and secure deployment practices.
 
-Inside of your Astro project, you'll see the following folders and files:
+It serves as a central hub for my professional identity, showcasing my transition from Education to **IT Operations & Cybersecurity**.
+
+👉 **Live Demo:** [www.alexpopov.tech](https://alexpopov.tech)
+
+## ⚡ Tech Stack
+
+Built with the **JAMstack** philosophy for speed and security:
+
+* **Framework:** [Astro](https://astro.build/) (Zero-JS by default)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Utility-first)
+* **Deployment:** [Cloudflare Pages](https://pages.cloudflare.com/) (Edge Network)
+* **DNS & Security:** Cloudflare (DNSSEC, Bot Fight Mode, HSTS)
+* **Version Control:** Git & GitHub (CI/CD Pipeline)
+
+## 🛠️ Features
+
+* **Serverless Architecture:** No servers to manage, infinite scalability.
+* **CI/CD Pipeline:** Automatic deployments via GitHub Actions upon push.
+* **Privacy-First Analytics:** Cloudflare Web Analytics (No cookies).
+* **Cyberpunk UI:** Custom CSS animations and responsive grid layout.
+* **Optimized Performance:** 100/100 Lighthouse Score.
+
+## 📂 Project Structure
 
 ```text
 /
-├── public/
+├── public/       # Static assets (CV, Images, Favicon)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+│   ├── layouts/  # Main layout (Cyberpunk Grid Background)
+│   ├── pages/    # Route components (index.astro)
+│   └── styles/   # Global Tailwind directives
+└── astro.config  # Configuration
