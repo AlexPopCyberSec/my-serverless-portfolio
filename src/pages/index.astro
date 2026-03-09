@@ -4,49 +4,62 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Alex | IT & CyberSec">
     
-    <main class="max-w-6xl mx-auto px-6 py-8 md:py-12">
+    <main class="max-w-6xl mx-auto px-6 pt-8 md:pt-12">
+    
+    <div class="flex flex-col xl:flex-row xl:items-center gap-4 md:gap-6 mb-16 md:mb-32 w-full">
         
-        <section class="mb-24">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-xs font-mono mb-6">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                SYSTEM STATUS: ONLINE / OPEN TO WORK
-            </div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-fit shadow-sm">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            SYSTEM STATUS: ONLINE / OPEN TO WORK
+        </div>
 
-            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-4 font-mono">
-                Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600">Alex</span>.
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-zinc-400 mb-8 max-w-2xl">
-                IT Infrastructure and Security Specialist. <br>
-                <span class="text-zinc-500 text-base">
-                    CompTIA Trifecta (A+, Network+, Security+) Certified professional transitioning from education back to enterprise IT. 
-                    I combine strong technical troubleshooting with elite communication skills to resolve complex escalations. 
-                    <strong class="text-zinc-400">Actively seeking MSP Support, Junior SysAdmin & IT Infrastructure opportunities.</strong>
-                </span>
-            </p>
+        <div class="flex flex-wrap items-center gap-4 px-4 py-2 rounded-full border border-zinc-800 bg-gradient-to-r from-zinc-900/80 to-zinc-900/20 text-[10px] md:text-xs font-mono text-zinc-500 shadow-lg backdrop-blur-md w-fit">
+            <div class="flex items-center gap-2">HCMC <span id="vn-time" class="text-zinc-300 font-bold">--:--</span></div>
+            <div class="hidden sm:block text-zinc-700">|</div>
+            <div class="flex items-center gap-2">NYC <span id="nyc-time" class="text-zinc-300 font-bold">--:--</span></div>
+            <div class="hidden sm:block text-zinc-700">|</div>
+            <div class="flex items-center gap-2">LONDON <span id="ldn-time" class="text-zinc-300 font-bold">--:--</span></div>
+            <div class="hidden sm:block text-zinc-700">|</div>
+            <div class="flex items-center gap-2">SYDNEY <span id="syd-time" class="text-zinc-300 font-bold">--:--</span></div>
+        </div>
+        
+    </div>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="mailto:aleksandar@alexpopov.tech" class="px-6 py-3 bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-bold rounded hover:shadow-[0_0_20px_rgba(217,70,239,0.4)] transition-all">
-                    Contact Me
-                </a>
-                <a href="/CV-Public.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-zinc-700 hover:border-fuchsia-500 hover:text-fuchsia-400 text-zinc-300 rounded transition-all">
-                    Download CV
-                </a>
-                <a href="https://github.com/AlexPopCyberSec" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-zinc-700 hover:border-violet-500 hover:text-violet-400 text-zinc-300 rounded transition-all flex items-center gap-2 group">
-  <svg class="w-5 h-5 fill-current text-zinc-500 group-hover:text-violet-500 transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-  </svg>
-  <span>GitHub</span>
-</a>
-            </div>
-        </section>
+    <section class="mb-24 md:mb-32">
+        <h1 class="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-6 font-mono leading-none">
+            Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600">Alex</span>.
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-zinc-400 mb-10 max-w-3xl leading-relaxed">
+            IT Infrastructure and Security Specialist. <br>
+            <span class="text-zinc-500 text-base md:text-lg mt-2 block">
+                CompTIA Trifecta (A+, Network+, Security+) Certified professional transitioning from education back to enterprise IT. 
+                I combine strong technical troubleshooting with elite communication skills to resolve complex escalations.
+                <strong class="text-zinc-400 block mt-2">Actively seeking MSP Support, Junior SysAdmin & IT Infrastructure opportunities.</strong>
+            </span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="mailto:aleksandar@alexpopov.tech" class="px-8 py-4 text-lg bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-bold rounded hover:shadow-[0_0_20px_rgba(217,70,239,0.4)] transition-all text-center">
+                Contact Me
+            </a>
+            <a href="/CV-Public.pdf" target="_blank" rel="noopener noreferrer" class="px-8 py-4 text-lg border border-zinc-700 hover:border-fuchsia-500 hover:text-fuchsia-400 text-zinc-300 rounded transition-all text-center">
+                Download CV
+            </a>
+            <a href="https://github.com/AlexPopCyberSec" target="_blank" rel="noopener noreferrer" class="px-8 py-4 text-lg border border-zinc-700 hover:border-violet-500 hover:text-violet-400 text-zinc-300 rounded transition-all flex items-center justify-center gap-2 group">
+                <svg class="w-5 h-5 fill-current text-zinc-500 group-hover:text-violet-500 transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </section>
 
         <section class="mb-16">
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-fuchsia-600 pl-4">./CERTIFICATES</h2>
-            
+            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-fuchsia-600 pl-4 uppercase">./Certificates</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-fuchsia-500 transition-all group">
                     <div class="flex items-center justify-between mb-4">
@@ -58,7 +71,6 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     <p class="text-zinc-400 text-sm">Hardware diagnostics, Windows/Linux Administration, Security basics & Mobile devices.</p>
                 </div>
-
                 <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-violet-500 transition-all group">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-bold text-white group-hover:text-violet-400 font-mono">Network+</h3>
@@ -69,7 +81,6 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     <p class="text-zinc-400 text-sm">TCP/IP, DNS/DHCP, Subnetting, VLANs, Routing protocols & Network troubleshooting.</p>
                 </div>
-
                 <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-orange-500 transition-all group">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-bold text-white group-hover:text-orange-400 font-mono">Security+</h3>
@@ -84,10 +95,8 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section class="mb-24">
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-cyan-500 pl-4">./TECHNICAL_SKILLS</h2>
-            
+            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-cyan-500 pl-4 uppercase">./Technical_Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
                 <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500/50 transition-all">
                     <h3 class="text-lg font-bold text-white mb-4 font-mono text-cyan-400">>> Systems_&_Security</h3>
                     <div class="flex flex-wrap gap-2">
@@ -101,7 +110,6 @@ import Layout from '../layouts/Layout.astro';
                         <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">VPN & Remote Access</span>
                     </div>
                 </div>
-
                 <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all">
                     <h3 class="text-lg font-bold text-white mb-4 font-mono text-purple-400">>> Tools_&_Cloud</h3>
                     <div class="flex flex-wrap gap-2">
@@ -115,82 +123,93 @@ import Layout from '../layouts/Layout.astro';
                         <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Cloudflare Pages</span>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-purple-600 pl-4">./HOME_LABS_&_PROJECTS</h2>
-            
-            <div class="space-y-4">
-                
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-fuchsia-500/50 transition-all rounded">
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-fuchsia-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div>
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-fuchsia-400">Enterprise Infrastructure Lab</h3>
-                    <p class="text-zinc-400 mb-4 text-sm">
-                        Architected a corporate network simulation on a Type-1 Hypervisor (Proxmox bare-metal). Segmented network traffic via VLANs (Management, Servers, Corporate) utilizing a pfSense virtual firewall. Deployed Windows Server 2022 to administer AD DS, complex GPO deployments (Folder Redirection, Drive Mapping), and established OOB management via Tailscale.
-                    </p>
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-fuchsia-500">
-                        <span class="whitespace-nowrap">> Proxmox VE</span>
-                        <span class="whitespace-nowrap">> pfSense & VLANs</span>
-                        <span class="whitespace-nowrap">> Active Directory</span>
-                        <span class="whitespace-nowrap">> GPO Management</span>
-                        <span class="whitespace-nowrap">> OOB Management</span>
-                    </div>
-                </div>
+        <section class="mb-24"> 
+            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-purple-600 pl-4">./HOME_LABS_&_PROJECTS</h2> 
+             
+            <div class="space-y-4"> 
+                 
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-fuchsia-500/50 transition-all rounded"> 
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-fuchsia-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-fuchsia-400">Enterprise Infrastructure Lab</h3> 
+                    <p class="text-zinc-400 mb-4 text-sm"> 
+                        Architected a corporate network simulation on a Type-1 Hypervisor (Proxmox bare-metal). Segmented network traffic via VLANs (Management, Servers, Corporate) utilizing a pfSense virtual firewall. Deployed Windows Server 2022 to administer AD DS, complex GPO deployments (Folder Redirection, Drive Mapping), and established OOB management via Tailscale. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-fuchsia-500"> 
+                        <span class="whitespace-nowrap">> Proxmox VE</span> 
+                        <span class="whitespace-nowrap">> pfSense & VLANs</span> 
+                        <span class="whitespace-nowrap">> Active Directory</span> 
+                        <span class="whitespace-nowrap">> GPO Management</span> 
+                        <span class="whitespace-nowrap">> OOB Management</span> 
+                    </div> 
+                </div> 
 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 transition-all rounded">
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-red-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div>
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-red-400">Cybersecurity Forensics (MVT)</h3>
-                    <p class="text-zinc-400 mb-4 text-sm">
-                        Utilized the Mobile Verification Toolkit (MVT) via Linux CLI to analyze Android backup images. Scanned for Indicators of Compromise (IOCs) related to spyware threats (Pegasus/Predator) to verify device integrity.
-                    </p>
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-red-500">
-                        <span class="whitespace-nowrap">> Linux CLI</span>
-                        <span class="whitespace-nowrap">> Digital Forensics</span>
-                        <span class="whitespace-nowrap">> IOC Scanning</span>
-                    </div>
-                </div>
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 transition-all rounded"> 
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-red-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-red-400">Cybersecurity Forensics (MVT)</h3> 
+                    <p class="text-zinc-400 mb-4 text-sm"> 
+                        Utilized the Mobile Verification Toolkit (MVT) via Linux CLI to analyze Android backup images. Scanned for Indicators of Compromise (IOCs) related to spyware threats (Pegasus/Predator) to verify device integrity. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-red-500"> 
+                        <span class="whitespace-nowrap">> Linux CLI</span> 
+                        <span class="whitespace-nowrap">> Digital Forensics</span> 
+                        <span class="whitespace-nowrap">> IOC Scanning</span> 
+                    </div> 
+                </div> 
 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all rounded">
-                     <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-purple-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div>
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-purple-400">Personal Portfolio (This Website)</h3>
-                    <p class="text-zinc-400 mb-4 text-sm">
-                        Serverless deployment using Astro & Tailwind. Configured custom domain DNS records via Cloudflare, set up SSL/TLS encryption, and integrated a CI/CD pipeline via GitHub Actions for automated edge deployment.
-                    </p>
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-purple-500">
-                        <span class="whitespace-nowrap">> Cloudflare Pages</span>
-                        <span class="whitespace-nowrap">> Astro</span>
-                        <span class="whitespace-nowrap">> CI/CD</span>
-                    </div>
-                </div>
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all rounded"> 
+                     <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-purple-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-purple-400">Personal Portfolio (This Website)</h3> 
+                    <p class="text-zinc-400 mb-4 text-sm"> 
+                        Serverless deployment using Astro & Tailwind. Configured custom domain DNS records via Cloudflare, set up SSL/TLS encryption, and integrated a CI/CD pipeline via GitHub Actions for automated edge deployment. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-purple-500"> 
+                        <span class="whitespace-nowrap">> Cloudflare Pages</span> 
+                        <span class="whitespace-nowrap">> Astro</span> 
+                        <span class="whitespace-nowrap">> CI/CD</span> 
+                    </div> 
+                </div> 
 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-blue-500/50 transition-all rounded">
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div>
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-blue-400">Lingo Leap (Production Site)</h3>
-                        <a href="https://lingo-leap.net" target="_blank" rel="noopener noreferrer" class="text-xs border border-blue-500/30 text-blue-400 px-2 py-1 rounded hover:bg-blue-500 hover:text-white transition-colors">
-                            VISIT SITE ↗
-                        </a>
-                    </div>
-                    <p class="text-zinc-400 mb-4 text-sm">
-                        AI-assisted "vibecoded" production platform built with Astro. Acted as Lead Architect performing extensive debugging and security hardening: enforced strict HTTP Security Headers (HSTS, X-Frame-Options), configured TLS 1.2+ minimums, and implemented Bot Mitigation via Cloudflare Edge Network. Achieved SecurityHeaders Grade A and 100/100 Pagespeed score.
-                    </p>
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-blue-500">
-                        <span class="whitespace-nowrap">> Web Development</span>
-                        <span class="whitespace-nowrap">> DevSecOps</span>
-                        <span class="whitespace-nowrap">> Cloudflare Edge</span>
-                        <span class="whitespace-nowrap">> Security Hardening</span>
-                        <span class="whitespace-nowrap">> DNS Management</span>
-                    </div>
-                </div>
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-blue-500/50 transition-all rounded"> 
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <div class="flex justify-between items-start"> 
+                        <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-blue-400">Lingo Leap (Production Site)</h3> 
+                        <a href="https://lingo-leap.net" target="_blank" rel="noopener noreferrer" class="text-xs border border-blue-500/30 text-blue-400 px-2 py-1 rounded hover:bg-blue-500 hover:text-white transition-colors"> 
+                            VISIT SITE ↗ 
+                        </a> 
+                    </div> 
+                    <p class="text-zinc-400 mb-4 text-sm"> 
+                        AI-assisted "vibecoded" production platform built with Astro. Acted as Lead Architect performing extensive debugging and security hardening: enforced strict HTTP Security Headers (HSTS, X-Frame-Options), configured TLS 1.2+ minimums, and implemented Bot Mitigation via Cloudflare Edge Network. Achieved SecurityHeaders Grade A and 100/100 Pagespeed score. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-blue-500"> 
+                        <span class="whitespace-nowrap">> Web Development</span> 
+                        <span class="whitespace-nowrap">> DevSecOps</span> 
+                        <span class="whitespace-nowrap">> Cloudflare Edge</span> 
+                        <span class="whitespace-nowrap">> Security Hardening</span> 
+                        <span class="whitespace-nowrap">> DNS Management</span> 
+                    </div> 
+                </div> 
 
-            </div>
+            </div> 
         </section>
 
-        <footer class="text-center text-zinc-600 text-xs font-mono pb-10 pt-10 border-t border-zinc-900">
-            <p>echo "Alex @ Saigon";</p>
+        <footer class="text-center text-zinc-600 text-[10px] font-mono py-20 border-t border-zinc-900">
+            <p>echo "Alex @ Ho Chi Minh City"; // GMT+7 Strategic Base</p>
         </footer>
 
     </main>
 </Layout>
+
+<script is:inline>
+    function updateClocks() {
+        const fmt = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        document.getElementById('vn-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Asia/Ho_Chi_Minh' });
+        document.getElementById('nyc-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'America/New_York' });
+        document.getElementById('ldn-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Europe/London' });
+        document.getElementById('syd-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Australia/Sydney' });
+    }
+    setInterval(updateClocks, 1000);
+    updateClocks();
+</script>
