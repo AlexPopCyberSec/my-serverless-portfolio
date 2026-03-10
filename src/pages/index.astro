@@ -6,9 +6,9 @@ import Layout from '../layouts/Layout.astro';
     
     <main class="max-w-6xl mx-auto px-6 pt-8 md:pt-12">
     
-    <div class="flex flex-col xl:flex-row xl:items-center gap-4 md:gap-6 mb-16 md:mb-32 w-full">
+    <div class="flex flex-col xl:flex-row xl:items-center gap-4 md:gap-6 mb-8 md:mb-32 w-full">
         
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-fit shadow-sm">
+        <div class="flex xl:inline-flex justify-center xl:justify-start items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-full xl:w-fit shadow-sm">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -16,24 +16,31 @@ import Layout from '../layouts/Layout.astro';
             SYSTEM STATUS: ONLINE / OPEN TO WORK
         </div>
 
-        <div class="flex flex-wrap items-center gap-4 px-4 py-2 rounded-full border border-zinc-800 bg-gradient-to-r from-zinc-900/80 to-zinc-900/20 text-[10px] md:text-xs font-mono text-zinc-500 shadow-lg backdrop-blur-md w-fit">
-            <div class="flex items-center gap-2">HCMC <span id="vn-time" class="text-zinc-300 font-bold">--:--</span></div>
-            <div class="hidden sm:block text-zinc-700">|</div>
-            <div class="flex items-center gap-2">NYC <span id="nyc-time" class="text-zinc-300 font-bold">--:--</span></div>
-            <div class="hidden sm:block text-zinc-700">|</div>
-            <div class="flex items-center gap-2">LONDON <span id="ldn-time" class="text-zinc-300 font-bold">--:--</span></div>
-            <div class="hidden sm:block text-zinc-700">|</div>
-            <div class="flex items-center gap-2">SYDNEY <span id="syd-time" class="text-zinc-300 font-bold">--:--</span></div>
+        <div class="grid grid-cols-2 md:flex md:flex-row items-center gap-x-6 gap-y-3 px-5 py-3 md:rounded-full rounded-xl border border-zinc-800 bg-gradient-to-r from-zinc-900/80 to-zinc-900/20 text-[10px] md:text-xs font-mono text-zinc-500 shadow-lg backdrop-blur-md w-full xl:w-fit">
+    
+            <div class="flex items-center justify-between gap-2">HCMC <span id="vn-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
+            
+            <div class="hidden md:block text-zinc-700">|</div>
+            
+            <div class="flex items-center justify-between gap-2">NYC <span id="nyc-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
+            
+            <div class="hidden md:block text-zinc-700">|</div>
+            
+            <div class="flex items-center justify-between gap-2">LONDON <span id="ldn-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
+            
+            <div class="hidden md:block text-zinc-700">|</div>
+            
+            <div class="flex items-center justify-between gap-2">SYDNEY <span id="syd-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
         </div>
         
     </div>
 
     <section class="mb-24 md:mb-32">
-        <h1 class="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-6 font-mono leading-none">
+        <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter mb-6 font-mono leading-none">
             Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600">Alex</span>.
         </h1>
         
-        <p class="text-xl md:text-2xl text-zinc-400 mb-10 max-w-3xl leading-relaxed">
+        <p class="text-xl md:text-xl lg:text-2xl text-zinc-400 mb-10 max-w-3xl leading-relaxed">
             IT Infrastructure and Security Specialist. <br>
             <span class="text-zinc-500 text-base md:text-lg mt-2 block">
                 CompTIA Trifecta (A+, Network+, Security+) Certified professional transitioning from education back to enterprise IT. 
@@ -57,6 +64,115 @@ import Layout from '../layouts/Layout.astro';
             </a>
         </div>
     </section>
+
+<section class="mb-24"> 
+            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-purple-600 pl-4">./HOME_LABS_&_PROJECTS</h2> 
+             
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> 
+                 
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-fuchsia-500/50 transition-all rounded flex flex-col h-full"> 
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-fuchsia-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-fuchsia-400">Enterprise Infrastructure Lab</h3> 
+                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
+                        Architected a corporate network simulation on a Type-1 Hypervisor (Proxmox bare-metal). Segmented network traffic via VLANs (Management, Servers, CCTV) utilizing a pfSense virtual firewall. Deployed Windows Server 2022 to administer AD DS, complex GPO deployments (Folder Redirection, Drive Mapping), and established OOB management via Tailscale. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-fuchsia-500 mt-auto"> 
+                        <span class="whitespace-nowrap">> Proxmox VE</span> 
+                        <span class="whitespace-nowrap">> pfSense & VLANs</span> 
+                        <span class="whitespace-nowrap">> Active Directory</span> 
+                        <span class="whitespace-nowrap">> GPO Management</span> 
+                        <span class="whitespace-nowrap">> OOB Management</span> 
+                    </div> 
+                </div> 
+
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-blue-500/50 transition-all rounded flex flex-col h-full"> 
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <div class="flex justify-between items-start"> 
+                        <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-blue-400">Lingo Leap (Production Site)</h3> 
+                        <a href="https://lingo-leap.net" target="_blank" rel="noopener noreferrer" class="text-xs border border-blue-500/30 text-blue-400 px-2 py-1 rounded hover:bg-blue-500 hover:text-white transition-colors"> 
+                            VISIT SITE ↗ 
+                        </a> 
+                    </div> 
+                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
+                        AI-assisted "vibecoded" production platform built with Astro. Acted as Lead Architect performing extensive debugging and security hardening: enforced strict HTTP Security Headers (HSTS, X-Frame-Options), configured TLS 1.2+ minimums, and implemented Bot Mitigation via Cloudflare Edge Network. Achieved SecurityHeaders Grade A and 100/100 Pagespeed score. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-blue-500 mt-auto"> 
+                        <span class="whitespace-nowrap">> Web Development</span> 
+                        <span class="whitespace-nowrap">> DevSecOps</span> 
+                        <span class="whitespace-nowrap">> Cloudflare Edge</span> 
+                        <span class="whitespace-nowrap">> Security Hardening</span> 
+                        <span class="whitespace-nowrap">> DNS Management</span> 
+                    </div> 
+                </div> 
+
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all rounded flex flex-col h-full"> 
+                     <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-purple-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-purple-400">Personal Portfolio (This Website)</h3> 
+                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
+                        Serverless deployment using Astro & Tailwind. Configured custom domain DNS records via Cloudflare, set up SSL/TLS encryption, and integrated a CI/CD pipeline via GitHub Actions for automated edge deployment. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-purple-500 mt-auto"> 
+                        <span class="whitespace-nowrap">> Cloudflare Pages</span> 
+                        <span class="whitespace-nowrap">> Astro</span> 
+                        <span class="whitespace-nowrap">> CI/CD</span> 
+                    </div> 
+                </div> 
+
+                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 transition-all rounded flex flex-col h-full"> 
+                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-red-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
+                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-red-400">Cybersecurity Forensics (MVT)</h3> 
+                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
+                        Utilized the Mobile Verification Toolkit (MVT) via Linux CLI to analyze Android backup images. Scanned for Indicators of Compromise (IOCs) related to spyware threats (Pegasus/Predator) to verify device integrity. 
+                    </p> 
+                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-red-500 mt-auto"> 
+                        <span class="whitespace-nowrap">> Linux CLI</span> 
+                        <span class="whitespace-nowrap">> Digital Forensics</span> 
+                        <span class="whitespace-nowrap">> IOC Scanning</span> 
+                    </div> 
+                </div> 
+            </div> 
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-cyan-500 pl-4 uppercase">./Technical_Skills</h2>
+            
+            <div class="flex flex-col gap-6">
+                <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500/50 transition-all">
+                    <h3 class="text-lg font-bold text-white mb-4 font-mono text-cyan-400">>> Systems_&_Security</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Windows Server 2022</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Linux (Ubuntu/Kali CLI)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Active Directory (GPO)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Microsoft Entra ID</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Hybrid Identity Sync</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">pfSense Firewall</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">VLANs (802.1Q)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Malware Remediation</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">IAM / Access Control</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">DNS/DHCP Management</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Disaster Recovery</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">VPN & Remote Access</span>
+                    </div>
+                </div>
+                <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all">
+                    <h3 class="text-lg font-bold text-white mb-4 font-mono text-purple-400">>> Tools_&_Cloud</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Proxmox VE (Type-1 Hypervisor)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">VirtualBox / VMware</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">TP-Link Managed Switches</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Tailscale (OOB)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">MVT (Mobile Forensics)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Wireshark (Packet Analysis)</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Git / GitHub</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Astro / Tailwind</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Jira / Ticketing Systems</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Office 365 Admin</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Nmap</span>
+                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Cloudflare Edge</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="mb-16">
             <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-fuchsia-600 pl-4 uppercase">./Certificates</h2>
@@ -92,106 +208,6 @@ import Layout from '../layouts/Layout.astro';
                     <p class="text-zinc-400 text-sm">Threat Analysis, Risk Management, Cryptography, Incident Response & Security Architecture.</p>
                 </div>
             </div>
-        </section>
-
-        <section class="mb-24">
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-cyan-500 pl-4 uppercase">./Technical_Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500/50 transition-all">
-                    <h3 class="text-lg font-bold text-white mb-4 font-mono text-cyan-400">>> Systems_&_Security</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Windows Server 2022</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Linux (Ubuntu/Kali CLI)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Active Directory (GPO)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Malware Remediation</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">IAM / Access Control</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">DNS/DHCP Management</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Disaster Recovery</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">VPN & Remote Access</span>
-                    </div>
-                </div>
-                <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all">
-                    <h3 class="text-lg font-bold text-white mb-4 font-mono text-purple-400">>> Tools_&_Cloud</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">VirtualBox / VMware</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Wireshark (Packet Analysis)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Git / GitHub</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Astro / Tailwind</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Jira / Ticketing Systems</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Office 365 Admin</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Nmap</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Cloudflare Pages</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-24"> 
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-purple-600 pl-4">./HOME_LABS_&_PROJECTS</h2> 
-             
-            <div class="space-y-4"> 
-                 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-fuchsia-500/50 transition-all rounded"> 
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-fuchsia-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-fuchsia-400">Enterprise Infrastructure Lab</h3> 
-                    <p class="text-zinc-400 mb-4 text-sm"> 
-                        Architected a corporate network simulation on a Type-1 Hypervisor (Proxmox bare-metal). Segmented network traffic via VLANs (Management, Servers, Corporate) utilizing a pfSense virtual firewall. Deployed Windows Server 2022 to administer AD DS, complex GPO deployments (Folder Redirection, Drive Mapping), and established OOB management via Tailscale. 
-                    </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-fuchsia-500"> 
-                        <span class="whitespace-nowrap">> Proxmox VE</span> 
-                        <span class="whitespace-nowrap">> pfSense & VLANs</span> 
-                        <span class="whitespace-nowrap">> Active Directory</span> 
-                        <span class="whitespace-nowrap">> GPO Management</span> 
-                        <span class="whitespace-nowrap">> OOB Management</span> 
-                    </div> 
-                </div> 
-
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 transition-all rounded"> 
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-red-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-red-400">Cybersecurity Forensics (MVT)</h3> 
-                    <p class="text-zinc-400 mb-4 text-sm"> 
-                        Utilized the Mobile Verification Toolkit (MVT) via Linux CLI to analyze Android backup images. Scanned for Indicators of Compromise (IOCs) related to spyware threats (Pegasus/Predator) to verify device integrity. 
-                    </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-red-500"> 
-                        <span class="whitespace-nowrap">> Linux CLI</span> 
-                        <span class="whitespace-nowrap">> Digital Forensics</span> 
-                        <span class="whitespace-nowrap">> IOC Scanning</span> 
-                    </div> 
-                </div> 
-
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all rounded"> 
-                     <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-purple-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-purple-400">Personal Portfolio (This Website)</h3> 
-                    <p class="text-zinc-400 mb-4 text-sm"> 
-                        Serverless deployment using Astro & Tailwind. Configured custom domain DNS records via Cloudflare, set up SSL/TLS encryption, and integrated a CI/CD pipeline via GitHub Actions for automated edge deployment. 
-                    </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-purple-500"> 
-                        <span class="whitespace-nowrap">> Cloudflare Pages</span> 
-                        <span class="whitespace-nowrap">> Astro</span> 
-                        <span class="whitespace-nowrap">> CI/CD</span> 
-                    </div> 
-                </div> 
-
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-blue-500/50 transition-all rounded"> 
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <div class="flex justify-between items-start"> 
-                        <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-blue-400">Lingo Leap (Production Site)</h3> 
-                        <a href="https://lingo-leap.net" target="_blank" rel="noopener noreferrer" class="text-xs border border-blue-500/30 text-blue-400 px-2 py-1 rounded hover:bg-blue-500 hover:text-white transition-colors"> 
-                            VISIT SITE ↗ 
-                        </a> 
-                    </div> 
-                    <p class="text-zinc-400 mb-4 text-sm"> 
-                        AI-assisted "vibecoded" production platform built with Astro. Acted as Lead Architect performing extensive debugging and security hardening: enforced strict HTTP Security Headers (HSTS, X-Frame-Options), configured TLS 1.2+ minimums, and implemented Bot Mitigation via Cloudflare Edge Network. Achieved SecurityHeaders Grade A and 100/100 Pagespeed score. 
-                    </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-blue-500"> 
-                        <span class="whitespace-nowrap">> Web Development</span> 
-                        <span class="whitespace-nowrap">> DevSecOps</span> 
-                        <span class="whitespace-nowrap">> Cloudflare Edge</span> 
-                        <span class="whitespace-nowrap">> Security Hardening</span> 
-                        <span class="whitespace-nowrap">> DNS Management</span> 
-                    </div> 
-                </div> 
-
             </div> 
         </section>
 
