@@ -2,328 +2,548 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Alex | IT & CyberSec">
+<Layout title="Alex | IT, CyberSec & BPA">
     
-    <main class="max-w-6xl mx-auto px-6 pt-8 md:pt-12">
-    
-    <div class="flex flex-col xl:flex-row xl:items-center gap-4 md:gap-6 mb-8 md:mb-32 w-full">
-        
-        <div class="flex xl:inline-flex justify-center xl:justify-start items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-full xl:w-fit shadow-sm">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            SYSTEM STATUS: ONLINE / OPEN TO WORK
-        </div>
-
-        <div class="grid grid-cols-2 md:flex md:flex-row items-center gap-x-6 gap-y-3 px-5 py-3 md:rounded-full rounded-xl border border-zinc-800 bg-gradient-to-r from-zinc-900/80 to-zinc-900/20 text-[10px] md:text-xs font-mono text-zinc-500 shadow-lg backdrop-blur-md w-full xl:w-fit">
-    
-            <div class="flex items-center justify-between gap-2">HCMC <span id="vn-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
-            
-            <div class="hidden md:block text-zinc-700">|</div>
-            
-            <div class="flex items-center justify-between gap-2">NYC <span id="nyc-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
-            
-            <div class="hidden md:block text-zinc-700">|</div>
-            
-            <div class="flex items-center justify-between gap-2">LONDON <span id="ldn-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
-            
-            <div class="hidden md:block text-zinc-700">|</div>
-            
-            <div class="flex items-center justify-between gap-2">SYDNEY <span id="syd-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1.5 py-0.5 rounded">--:--:--</span></div>
-        </div>
-        
-    </div>
-
-    <section class="mb-24 md:mb-32">
-        <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter mb-6 font-mono leading-none">
-            Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600">Alex</span>.
-        </h1>
-        
-        <p class="text-xl md:text-xl lg:text-2xl text-zinc-400 mb-10 max-w-3xl leading-relaxed">
-            IT Infrastructure and Security Specialist. <br>
-            <span class="text-zinc-500 text-base md:text-lg mt-2 block">
-                CompTIA Trifecta (A+, Network+, Security+) Certified professional transitioning from education back to enterprise IT. 
-                I combine strong technical troubleshooting with elite communication skills to resolve complex escalations.
-                <strong class="text-zinc-400 block mt-2">Actively seeking MSP Support, Junior SysAdmin, & Cloud Infrastructure opportunities.</strong>
-            </span>
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-            <a href="mailto:aleksandar@alexpopov.tech" class="px-8 py-4 text-lg bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-bold rounded hover:shadow-[0_0_20px_rgba(217,70,239,0.4)] transition-all text-center">
-                Contact Me
-            </a>
-            <a href="/CV-Public.pdf" target="_blank" rel="noopener noreferrer" class="px-8 py-4 text-lg border border-zinc-700 hover:border-fuchsia-500 hover:text-fuchsia-400 text-zinc-300 rounded transition-all text-center">
-                Download CV
-            </a>
-            <a href="https://github.com/AlexPopCyberSec" target="_blank" rel="noopener noreferrer" class="px-8 py-4 text-lg border border-zinc-700 hover:border-violet-500 hover:text-violet-400 text-zinc-300 rounded transition-all flex items-center justify-center gap-2 group">
-                <svg class="w-5 h-5 fill-current text-zinc-500 group-hover:text-violet-500 transition-colors" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                </svg>
-                <span>GitHub</span>
-            </a>
-        </div>
-    </section>
-
- <section class="mb-16">
-    <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-red-600 pl-4 uppercase">./INCIDENT_RESPONSE</h2>
-    
-    <div class="p-8 rounded bg-zinc-900/60 border border-zinc-800 hover:border-red-500/80 transition-all duration-300 group">
-        
-        <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-3 md:gap-4 mb-4">
-            <h3 class="text-lg md:text-xl leading-tight font-bold text-white group-hover:text-red-400 font-mono">Zero-Interaction Threat Analysis (Live MSP Compromise)</h3>
-            
-            <span class="w-full md:w-auto flex md:inline-flex items-center justify-center md:justify-start gap-1.5 px-3 py-1.5 bg-red-950/40 text-red-300 text-[11px] rounded font-mono border border-red-500/20 whitespace-nowrap mt-2 md:mt-0">
-                <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500 shadow-[0_0_8px_#ef4444]"></span>
+    <header class="w-full max-w-6xl mx-auto px-4 md:px-6 pt-6 md:pt-10 2xl:pt-12 relative z-50">
+        <div class="flex flex-col xl:flex-row xl:items-center gap-4 md:gap-6 w-full gsap-header opacity-0 translate-y-[-20px]">
+            <div class="flex xl:inline-flex justify-center xl:justify-start items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-full xl:w-fit shadow-sm">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                THREAT NEUTRALIZED
-            </span>
-        </div>
-
-        <p class="text-zinc-300 text-sm leading-relaxed mb-6 max-w-4xl">
-            Detected and responsibly disclosed a live clipboard-hijacking payload (ClearFake vector) on a US-based MSP's production website. Analyzed User-Agent evasion tactics and provided immediate remediation steps, resulting in successful threat neutralization within 24 hours.
-        </p>
-
-        <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-4 md:gap-6 pt-4 border-t border-zinc-800">
-            
-            <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-xs font-mono text-red-400">
-                <span>&gt; Threat Hunting</span>
-                <span>&gt; Incident Response</span>
-                <span>&gt; OSINT</span>
-                <span>&gt; Malware Analysis</span>
+                SYSTEM STATUS: ONLINE / OPEN TO WORK
             </div>
 
-            <a href="https://github.com/AlexPopCyberSec/My-IT-Career-Transition-Journey/blob/main/Threat-Analysis-MSP-Website-Compromise/README.md" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 md:py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-mono rounded border border-zinc-700 transition-all whitespace-nowrap">
-    <span>[ READ GITHUB REPORT ↗ ]</span>
-</a>
+            <div class="grid grid-cols-2 md:flex md:flex-row items-center gap-x-4 gap-y-3 px-4 md:px-5 py-3 md:rounded-full rounded-xl border border-zinc-800 bg-gradient-to-r from-zinc-900/80 to-zinc-900/20 text-[9px] sm:text-[10px] md:text-xs font-mono text-zinc-500 shadow-lg backdrop-blur-md w-full xl:w-fit">
+                <div class="flex items-center justify-between gap-1 md:gap-2">HCMC <span id="vn-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1 md:px-1.5 py-0.5 rounded">--:--:--</span></div>
+                <div class="hidden md:block text-zinc-700">|</div>
+                <div class="flex items-center justify-between gap-1 md:gap-2">NYC <span id="nyc-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1 md:px-1.5 py-0.5 rounded">--:--:--</span></div>
+                <div class="hidden md:block text-zinc-700">|</div>
+                <div class="flex items-center justify-between gap-1 md:gap-2">LDN <span id="ldn-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1 md:px-1.5 py-0.5 rounded">--:--:--</span></div>
+                <div class="hidden md:block text-zinc-700">|</div>
+                <div class="flex items-center justify-between gap-1 md:gap-2">SYD <span id="syd-time" class="text-zinc-300 font-bold bg-zinc-950/50 border border-zinc-800/50 px-1 md:px-1.5 py-0.5 rounded">--:--:--</span></div>
+            </div>
         </div>
-    </div>
-</section>   
+    </header>
 
-<section class="mb-24"> 
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-purple-600 pl-4">./HOME_LABS_&_PROJECTS</h2> 
-             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> 
-                 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-fuchsia-500/50 transition-all rounded flex flex-col h-full"> 
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-fuchsia-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-fuchsia-400">Enterprise Infrastructure Lab</h3> 
-                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
-                        Architected a corporate network simulation on a Type-1 Hypervisor (Proxmox) with pfSense VLAN segmentation. Administered Windows Server 2022 (AD DS, GPOs, OOB Management). Executed Tenable Nessus vulnerability scans, hardened infrastructure, and simulated enterprise IT workflows by tracking incident remediations and L2 escalations via Jira Service Management. 
+    <main class="w-full">
+        
+        <div id="hero-ir-container" class="relative w-full h-[100svh] overflow-hidden flex items-center justify-center">
+            
+            <section id="hero-section" class="absolute inset-0 flex flex-col justify-center max-w-6xl mx-auto px-6 opacity-0 pb-16 lg:pb-12 2xl:pb-32">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl 2xl:text-9xl font-bold text-white tracking-tighter mb-4 lg:mb-6 2xl:mb-8 font-mono leading-none mt-10 md:mt-0">
+                    Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600 block sm:inline">Alex</span>.
+                </h1>
+                
+                <p class="text-lg md:text-xl lg:text-2xl 2xl:text-4xl text-zinc-400 mb-8 lg:mb-8 2xl:mb-12 max-w-4xl leading-relaxed">
+                    IT Infrastructure and Security Specialist. <br>
+                    <span class="text-zinc-500 text-sm md:text-base lg:text-lg 2xl:text-2xl mt-3 2xl:mt-4 block leading-relaxed">
+                        CompTIA Trifecta (A+, Network+, Security+) Certified professional transitioning from education back to enterprise IT. 
+                        I combine strong technical troubleshooting with elite communication skills to resolve complex escalations.
+                        <strong class="text-zinc-400 block mt-3 2xl:mt-4">Actively seeking MSP Support, Junior SysAdmin, & Cloud Infrastructure opportunities.</strong>
+                    </span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 2xl:gap-6">
+                    <a href="mailto:aleksandar@alexpopov.tech" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-bold rounded-lg hover:shadow-[0_0_30px_rgba(217,70,239,0.5)] transition-all text-center">
+                        Contact Me
+                    </a>
+                    <a href="/CV-Public.pdf" target="_blank" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl border-2 border-zinc-700 hover:border-fuchsia-500 hover:text-fuchsia-400 text-zinc-300 rounded-lg transition-all text-center">
+                        Download CV
+                    </a>
+                    <a href="https://github.com/AlexPopCyberSec" target="_blank" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl border-2 border-zinc-700 hover:border-violet-500 hover:text-violet-400 text-zinc-300 rounded-lg transition-all flex items-center justify-center gap-2 2xl:gap-3 group">
+                        <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current text-zinc-500 group-hover:text-violet-500 transition-colors" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="ir-section" class="absolute inset-0 flex items-center justify-center max-w-5xl mx-auto px-4 sm:px-6 opacity-0 scale-50 pointer-events-none">
+                <div class="w-full p-6 lg:p-10 2xl:p-14 rounded-xl bg-zinc-950/90 border-2 border-red-600/80 shadow-[0_0_80px_rgba(239,68,68,0.2)] backdrop-blur-xl">
+                    <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-mono text-white mb-4 lg:mb-6 border-l-4 border-red-600 pl-3 sm:pl-4 uppercase">./INCIDENT_RESPONSE</h2>
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center lg:justify-between gap-3 sm:gap-4 mb-4 lg:mb-8">
+                        <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-tight font-bold text-white font-mono">Zero-Interaction Threat Analysis (Live MSP)</h3>
+                        <span class="flex items-center gap-2 px-3 2xl:px-4 py-1.5 2xl:py-2 bg-red-950/40 text-red-300 text-xs md:text-sm 2xl:text-base rounded font-mono border border-red-500/20 whitespace-nowrap">
+                            <span class="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-red-500 shadow-[0_0_8px_#ef4444]"></span></span>
+                            THREAT NEUTRALIZED
+                        </span>
+                    </div>
+                    <p class="text-zinc-300 text-sm md:text-base lg:text-lg 2xl:text-xl leading-relaxed mb-6 lg:mb-10">
+                        Detected and responsibly disclosed a live clipboard-hijacking payload (ClearFake vector) on a US-based MSP's production website. Analyzed User-Agent evasion tactics and provided immediate remediation steps, resulting in successful threat neutralization within 24 hours.
+                    </p>
+                    <div class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-between gap-4 lg:gap-6 pt-4 lg:pt-6 border-t border-zinc-800">
+                        <div class="flex flex-wrap gap-x-4 lg:gap-x-6 gap-y-1.5 lg:gap-y-2 text-xs md:text-sm 2xl:text-base font-mono text-red-400">
+                            <span>&gt; Threat Hunting</span><span>&gt; Incident Response</span><span>&gt; OSINT</span><span>&gt; Malware Analysis</span>
+                        </div>
+                        <a href="https://github.com/AlexPopCyberSec" target="_blank" class="w-full sm:w-auto text-center px-6 2xl:px-8 py-3 2xl:py-4 bg-red-900/50 hover:bg-red-800/80 text-white text-xs md:text-sm 2xl:text-base font-mono rounded border border-red-700/50 transition-all cursor-pointer pointer-events-auto">
+                            [ READ GITHUB REPORT ↗ ]
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="labs-pin-container" class="h-[100svh] w-full flex flex-col justify-center overflow-hidden border-y border-zinc-900 relative">
+            <div class="max-w-6xl mx-auto px-6 w-full absolute top-[8%] lg:top-[12%] z-10">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-mono text-white border-l-4 border-purple-600 pl-4 sm:pl-6 drop-shadow-xl">./HOME_LABS_&_PROJECTS</h2>
+            </div>
+            
+            <div id="labs-track" class="flex gap-[15vw] lg:gap-[25vw] w-max px-[10vw] lg:px-[15vw] items-center h-full pt-10">
+                
+                <div class="lab-card opacity-0 scale-75 w-[90vw] md:w-[70vw] lg:w-[60vw] 2xl:w-[50vw] flex-shrink-0 p-6 md:p-8 lg:p-10 2xl:p-14 bg-zinc-900/95 border border-zinc-800 hover:border-fuchsia-500/50 transition-colors duration-300 rounded-2xl shadow-2xl flex flex-col justify-center min-h-[60vh] lg:min-h-[45vh] 2xl:min-h-[50vh] group relative overflow-hidden"> 
+                    <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-fuchsia-600 scale-y-0 group-hover:scale-y-100 transition-transform origin-center"></div>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-fuchsia-400 mb-4 lg:mb-6 font-mono transition-colors">Enterprise Infra Lab</h3> 
+                    <p class="text-zinc-300 mb-6 lg:mb-8 2xl:mb-10 text-sm md:text-base lg:text-lg 2xl:text-xl leading-relaxed flex-grow"> 
+                        Architected a corporate network simulation on a Type-1 Hypervisor (Proxmox) with pfSense VLAN segmentation. Administered Windows Server 2022 (AD DS, GPOs, OOB Management). Executed Tenable Nessus vulnerability scans and simulated L2 escalations via Jira Service Management. 
                     </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-fuchsia-500 mt-auto"> 
-                        <span class="whitespace-nowrap">> Proxmox VE</span> 
-                        <span class="whitespace-nowrap">> pfSense & VLANs</span> 
-                        <span class="whitespace-nowrap">> Active Directory</span> 
-                        <span class="whitespace-nowrap">> GPO Management</span> 
-                        <span class="whitespace-nowrap">> OOB Management</span> 
+                    <div class="flex flex-wrap gap-2 lg:gap-4 text-xs md:text-sm 2xl:text-base font-mono text-fuchsia-500 mt-auto bg-black/40 p-4 lg:p-6 rounded-xl border border-fuchsia-900/30"> 
+                        <span>> Proxmox VE</span> <span>> pfSense & VLANs</span> <span>> Active Directory</span> <span>> GPO</span> 
                     </div> 
                 </div> 
 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-blue-500/50 transition-all rounded flex flex-col h-full"> 
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <div class="flex justify-between items-start"> 
-                        <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-blue-400">Lingo Leap (Production Site)</h3> 
-                        <a href="https://lingo-leap.net" target="_blank" rel="noopener noreferrer" class="text-xs border border-blue-500/30 text-blue-400 px-2 py-1 rounded hover:bg-blue-500 hover:text-white transition-colors"> 
-                            VISIT SITE ↗ 
-                        </a> 
-                    </div> 
-                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
-                        AI-assisted "vibecoded" production platform built with Astro. Acted as Lead Architect performing extensive debugging and security hardening: enforced strict HTTP Security Headers (HSTS, X-Frame-Options), configured TLS 1.2+ minimums, and implemented Bot Mitigation via Cloudflare Edge Network. Achieved SecurityHeaders Grade A and 100/100 Pagespeed score. 
+                <div class="lab-card opacity-0 scale-75 w-[90vw] md:w-[70vw] lg:w-[60vw] 2xl:w-[50vw] flex-shrink-0 p-6 md:p-8 lg:p-10 2xl:p-14 bg-zinc-900/95 border border-zinc-800 hover:border-blue-500/50 transition-colors duration-300 rounded-2xl shadow-2xl flex flex-col justify-center min-h-[60vh] lg:min-h-[45vh] 2xl:min-h-[50vh] group relative overflow-hidden"> 
+                    <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-blue-600 scale-y-0 group-hover:scale-y-100 transition-transform origin-center"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 lg:mb-6 gap-3 lg:gap-4">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-blue-400 font-mono transition-colors">Lingo Leap</h3> 
+                        <a href="https://lingo-leap.net" class="text-xs md:text-sm 2xl:text-base border border-blue-500/50 hover:bg-blue-500 hover:text-white text-blue-400 px-3 lg:px-4 py-1.5 lg:py-2 rounded transition-colors w-fit relative z-10">VISIT SITE ↗</a>
+                    </div>
+                    <p class="text-zinc-300 mb-6 lg:mb-8 2xl:mb-10 text-sm md:text-base lg:text-lg 2xl:text-xl leading-relaxed flex-grow"> 
+                        AI-assisted "vibecoded" production platform built with Astro. Enforced strict HTTP Security Headers (HSTS, X-Frame-Options), configured TLS 1.2+ minimums, and implemented Bot Mitigation via Cloudflare Edge Network. 100/100 Pagespeed score. 
                     </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-blue-500 mt-auto"> 
-                        <span class="whitespace-nowrap">> Web Development</span> 
-                        <span class="whitespace-nowrap">> DevSecOps</span> 
-                        <span class="whitespace-nowrap">> Cloudflare Edge</span> 
-                        <span class="whitespace-nowrap">> Security Hardening</span> 
-                        <span class="whitespace-nowrap">> DNS Management</span> 
+                    <div class="flex flex-wrap gap-2 lg:gap-4 text-xs md:text-sm 2xl:text-base font-mono text-blue-500 mt-auto bg-black/40 p-4 lg:p-6 rounded-xl border border-blue-900/30"> 
+                        <span>> Web Dev</span> <span>> DevSecOps</span> <span>> Cloudflare</span> <span>> Security Headers</span> 
                     </div> 
                 </div> 
 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all rounded flex flex-col h-full"> 
-                     <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-purple-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-purple-400">Personal Portfolio (This Website)</h3> 
-                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
+                <div class="lab-card opacity-0 scale-75 w-[90vw] md:w-[70vw] lg:w-[60vw] 2xl:w-[50vw] flex-shrink-0 p-6 md:p-8 lg:p-10 2xl:p-14 bg-zinc-900/95 border border-zinc-800 hover:border-purple-500/50 transition-colors duration-300 rounded-2xl shadow-2xl flex flex-col justify-center min-h-[60vh] lg:min-h-[45vh] 2xl:min-h-[50vh] group relative overflow-hidden"> 
+                    <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-purple-600 scale-y-0 group-hover:scale-y-100 transition-transform origin-center"></div>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-purple-400 mb-4 lg:mb-6 font-mono transition-colors">Personal Portfolio</h3> 
+                    <p class="text-zinc-300 mb-6 lg:mb-8 2xl:mb-10 text-sm md:text-base lg:text-lg 2xl:text-xl leading-relaxed flex-grow"> 
                         Serverless deployment using Astro & Tailwind. Configured custom domain DNS records via Cloudflare, set up SSL/TLS encryption, and integrated a CI/CD pipeline via GitHub Actions for automated edge deployment. 
                     </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-purple-500 mt-auto"> 
-                        <span class="whitespace-nowrap">> Cloudflare Pages</span> 
-                        <span class="whitespace-nowrap">> Astro</span> 
-                        <span class="whitespace-nowrap">> CI/CD</span> 
+                    <div class="flex flex-wrap gap-2 lg:gap-4 text-xs md:text-sm 2xl:text-base font-mono text-purple-500 mt-auto bg-black/40 p-4 lg:p-6 rounded-xl border border-purple-900/30"> 
+                        <span>> Cloudflare Pages</span> <span>> Astro</span> <span>> CI/CD Pipelines</span> 
                     </div> 
                 </div> 
 
-                <div class="group relative p-6 bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 transition-all rounded flex flex-col h-full"> 
-                    <div class="absolute -left-[1px] top-0 bottom-0 w-[4px] bg-red-600 scale-y-0 group-hover:scale-y-100 transition-transform"></div> 
-                    <h3 class="text-lg font-bold text-white mb-2 font-mono group-hover:text-red-400">Cybersecurity Forensics (MVT)</h3> 
-                    <p class="text-zinc-400 mb-4 text-sm flex-grow"> 
+                <div class="lab-card opacity-0 scale-75 w-[90vw] md:w-[70vw] lg:w-[60vw] 2xl:w-[50vw] flex-shrink-0 p-6 md:p-8 lg:p-10 2xl:p-14 bg-zinc-900/95 border border-zinc-800 hover:border-red-500/50 transition-colors duration-300 rounded-2xl shadow-2xl flex flex-col justify-center min-h-[60vh] lg:min-h-[45vh] 2xl:min-h-[50vh] mr-[10vw] lg:mr-[15vw] group relative overflow-hidden"> 
+                    <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-red-600 scale-y-0 group-hover:scale-y-100 transition-transform origin-center"></div>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-red-400 mb-4 lg:mb-6 font-mono transition-colors">Cyber Forensics (MVT)</h3> 
+                    <p class="text-zinc-300 mb-6 lg:mb-8 2xl:mb-10 text-sm md:text-base lg:text-lg 2xl:text-xl leading-relaxed flex-grow"> 
                         Utilized the Mobile Verification Toolkit (MVT) via Linux CLI to analyze Android backup images. Scanned for Indicators of Compromise (IOCs) related to spyware threats (Pegasus/Predator) to verify device integrity. 
                     </p> 
-                    <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs font-mono text-red-500 mt-auto"> 
-                        <span class="whitespace-nowrap">> Linux CLI</span> 
-                        <span class="whitespace-nowrap">> Digital Forensics</span> 
-                        <span class="whitespace-nowrap">> IOC Scanning</span> 
+                    <div class="flex flex-wrap gap-2 lg:gap-4 text-xs md:text-sm 2xl:text-base font-mono text-red-500 mt-auto bg-black/40 p-4 lg:p-6 rounded-xl border border-red-900/30"> 
+                        <span>> Linux CLI</span> <span>> Digital Forensics</span> <span>> IOC Scanning</span> 
                     </div> 
-                </div> 
-            </div> 
+                </div>
+
+            </div>
         </section>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-cyan-500 pl-4 uppercase">./Technical_Skills</h2>
+        <section id="skills-pin-container" class="h-[100svh] w-full flex flex-col justify-center items-center overflow-hidden bg-zinc-950 relative px-4 sm:px-6 py-10 lg:py-0">
             
-            <div class="flex flex-col gap-6">
-                <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500/50 transition-all">
-                    <h3 class="text-lg font-bold text-white mb-4 font-mono text-cyan-400">>> Systems_&_Security</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Windows Server 2022</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Linux (Ubuntu/Kali CLI)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Active Directory (GPO)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Microsoft Entra ID</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Hybrid Identity Sync</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">pfSense Firewall</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">VLANs (802.1Q)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Malware Remediation</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">IAM / Access Control</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">DNS/DHCP Management</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Disaster Recovery</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">VPN & Remote Access</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">Vulnerability Patching</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-cyan-900 hover:text-cyan-200 transition-colors cursor-default">SIEM</span>
+            <div class="w-full max-w-5xl flex flex-col gap-4 sm:gap-6 lg:gap-8 mt-4 lg:mt-0">
+                
+                <h2 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-mono text-white border-l-4 border-cyan-500 pl-4 sm:pl-6 uppercase drop-shadow-xl w-fit">./Technical_Skills</h2>
+                
+                <div class="w-full bg-[#0a0a0c] border border-zinc-700 rounded-xl shadow-[0_0_50px_rgba(6,182,212,0.1)] overflow-hidden font-mono text-[10px] sm:text-xs lg:text-xs 2xl:text-base">
+                    
+                    <div class="flex items-center px-4 lg:px-6 py-2 lg:py-3 bg-zinc-900/90 border-b border-zinc-800 gap-2 z-20 relative backdrop-blur-sm">
+                        <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-red-500"></div>
+                        <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-2 lg:ml-4 text-zinc-500">alex@saigon:~/skills_matrix</span>
                     </div>
-                </div>
-                <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 transition-all">
-                    <h3 class="text-lg font-bold text-white mb-4 font-mono text-purple-400">>> Tools_&_Cloud</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Proxmox VE (Type-1 Hypervisor)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">VirtualBox / VMware</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">TP-Link Managed Switches</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Tailscale (OOB)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">MVT (Mobile Forensics)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Wireshark (Packet Analysis)</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Git / GitHub</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Astro / Tailwind</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Jira / Ticketing Systems</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Office 365 Admin</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Nmap</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Cloudflare Edge</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Tenable Nessus</span>
-                        <span class="px-3 py-1 bg-zinc-800 text-xs text-zinc-300 rounded hover:bg-purple-900 hover:text-purple-200 transition-colors cursor-default">Splunk</span>
+                    
+                    <div class="relative h-[55vh] lg:h-[55vh] 2xl:h-[65vh] overflow-hidden">
+                        
+                        <div id="term-group-1" class="absolute inset-0 flex flex-col gap-1 lg:gap-1 2xl:gap-2 p-4 lg:p-6 2xl:p-10 w-full pb-10 lg:pb-12">
+                            <div class="sys-line opacity-0"><span class="text-fuchsia-500">alex@saigon</span><span class="text-zinc-500">:$</span> ./load_systems.sh</div>
+                            
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Windows Server 2022</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Linux (Ubuntu/Kali CLI)</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Active Directory (GPO)</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Microsoft Entra ID</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Hybrid Identity Sync</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: pfSense Firewall</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: VLANs (802.1Q)</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Malware Remediation</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: IAM / Access Control</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: DNS/DHCP Management</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Disaster Recovery</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: VPN & Remote Access</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: Vulnerability Patching</div>
+                            <div class="sys-line opacity-0 text-cyan-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Loaded: SIEM</div>
+                            
+                            <div class="sys-clear opacity-0 mt-2"><span class="text-fuchsia-500">alex@saigon</span><span class="text-zinc-500">:$</span> clear</div>
+                        </div>
+
+                        <div id="term-group-2" class="absolute inset-0 flex flex-col gap-1 lg:gap-1 2xl:gap-2 p-4 lg:p-6 2xl:p-10 w-full opacity-0 pb-10 lg:pb-12">
+                            <div class="tool-line opacity-0"><span class="text-fuchsia-500">alex@saigon</span><span class="text-zinc-500">:$</span> ./load_tools.exe</div>
+                            
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Proxmox VE (Type-1 Hypervisor)</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: VirtualBox / VMware</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: TP-Link Managed Switches</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Tailscale (OOB)</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: MVT (Mobile Forensics)</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Wireshark (Packet Analysis)</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Git / GitHub</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Astro / Tailwind</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Jira / Ticketing Systems</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Office 365 Admin</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Nmap</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Cloudflare Edge</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Tenable Nessus</div>
+                            <div class="tool-line opacity-0 text-purple-400 pl-3 lg:pl-4 2xl:pl-6">[ OK ] Init: Splunk</div>
+                            
+                            <div class="tool-line opacity-0 mt-2 text-emerald-400 animate-pulse">root@system:~# _</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-4 md:mb-16">
-    <h2 class="text-2xl font-mono text-white mb-8 border-l-4 border-fuchsia-600 pl-4 uppercase">./Certificates</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
-    
-    <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-red-500 transition-all group relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4 relative z-10">
-            <div>
-                <h3 class="text-lg font-bold text-white group-hover:text-red-400 font-mono">CompTIA A+</h3>
-                <span class="inline-block mt-1 px-2 py-1 bg-red-950 text-red-300 text-[10px] rounded font-mono border border-red-500/20">CERTIFIED</span>
+        <section id="bpa-section" class="min-h-[100svh] w-full flex items-center justify-center bg-zinc-950 relative overflow-hidden border-t border-zinc-900">
+            
+            <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row gap-8 lg:gap-12 2xl:gap-20 h-full py-12 lg:py-16">
+                
+                <div class="w-full md:w-1/2 flex flex-col justify-center sticky-bpa-content z-10 pt-10 md:pt-0">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-mono text-emerald-400 mb-4 lg:mb-8 border-l-4 border-emerald-500 pl-4 lg:pl-6 uppercase drop-shadow-xl">./BPA_SOLUTIONS</h2>
+                    <div class="bpa-intro-text opacity-0">
+                        <p class="text-xl lg:text-2xl text-white mb-4 lg:mb-6 font-mono leading-tight">
+                            Security-First Automation.
+                        </p>
+                        <p class="text-zinc-400 text-base lg:text-lg 2xl:text-xl leading-relaxed">
+                            Boring tasks are a money bleed. I automate the mundane so your team can focus on critical operations. Secure and compliant AI automation solutions for your small business.
+                        </p>
+                        <div class="mt-6 lg:mt-10 flex flex-wrap gap-3 lg:gap-4 text-emerald-500/50 font-mono text-xs lg:text-sm">
+                            <span>[ STABLE ]</span>
+                            <span>[ SECURE ]</span>
+                            <span>[ SCALABLE ]</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 relative h-[50vh] lg:h-[65vh] flex flex-col items-center overflow-hidden z-10">
+                    <div id="bpa-cards-track" class="flex flex-col gap-[20vh] 2xl:gap-[30vh] w-full pt-[5vh] pb-[5vh]">
+                        
+                        <div class="bpa-card p-6 lg:p-10 2xl:p-14 rounded-3xl bg-[#0a0a0c] border border-emerald-900/40 shadow-[0_20px_50px_rgba(16,185,129,0.05)] min-h-[40vh] md:min-h-[45vh] 2xl:min-h-[60vh] flex flex-col justify-center">
+                            <div class="text-emerald-500 font-mono text-xs lg:text-sm mb-4 lg:mb-6 flex items-center gap-2 lg:gap-3">
+                                <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-emerald-500 animate-pulse"></div> [ WORKFLOW ]
+                            </div>
+                            <h3 class="text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white mb-4 lg:mb-6">Workflow Engineering</h3>
+                            <p class="text-zinc-400 text-base lg:text-lg 2xl:text-xl leading-relaxed">Automation backed by System Administration. While others build fragile zaps, I build robust, error-handled enterprise workflows.</p>
+                        </div>
+
+                        <div class="bpa-card p-6 lg:p-10 2xl:p-14 rounded-3xl bg-[#0a0a0c] border border-emerald-900/40 shadow-[0_20px_50px_rgba(16,185,129,0.05)] min-h-[40vh] md:min-h-[45vh] 2xl:min-h-[60vh] flex flex-col justify-center">
+                            <div class="text-emerald-500 font-mono text-xs lg:text-sm mb-4 lg:mb-6 flex items-center gap-2 lg:gap-3">
+                                <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-emerald-500"></div> [ INTEGRATION ]
+                            </div>
+                            <h3 class="text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white mb-4 lg:mb-6">Smart Operations</h3>
+                            <p class="text-zinc-400 text-base lg:text-lg 2xl:text-xl leading-relaxed">Turn operational friction into growth. My goal is to reduce your manual workload by 40-70% within the first 90 days.</p>
+                        </div>
+
+                        <div class="bpa-card p-6 lg:p-10 2xl:p-14 rounded-3xl bg-[#0a0a0c] border border-emerald-900/40 shadow-[0_20px_50px_rgba(16,185,129,0.05)] min-h-[40vh] md:min-h-[45vh] 2xl:min-h-[60vh] flex flex-col justify-center">
+                            <div class="text-emerald-500 font-mono text-xs lg:text-sm mb-4 lg:mb-6 flex items-center gap-2 lg:gap-3">
+                                <div class="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-emerald-500"></div> [ RETAINER ]
+                            </div>
+                            <h3 class="text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white mb-4 lg:mb-6">Managed Automation</h3>
+                            <p class="text-zinc-400 text-base lg:text-lg 2xl:text-xl leading-relaxed">Automation isn't a "set it and forget it" project. Tools update and businesses evolve. I provide proactive monitoring, continuous error resolution, and monthly scaling to ensure your workflows never break.</p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-            <img src="/images/aplus.png" alt="A+ Badge" class="w-14 h-14 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_0_15px_rgba(239,68,68,0.8)] transition-all duration-500" />
-        </div>
-        <div class="w-full bg-zinc-800 rounded-full h-1 mb-2 relative z-10">
-            <div class="bg-red-500 h-1 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.5)]" style="width: 100%"></div>
-        </div>
-        <p class="text-zinc-400 text-sm relative z-10">Hardware, OS Troubleshooting, Basic Networking, Mobile Devices & IT Support.</p>
-    </div>
+        </section>
 
-    <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-violet-500 transition-all group relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4 relative z-10">
-            <div>
-                <h3 class="text-lg font-bold text-white group-hover:text-violet-400 font-mono">CompTIA Network+</h3>
-                <span class="inline-block mt-1 px-2 py-1 bg-violet-950 text-violet-300 text-[10px] rounded font-mono border border-violet-500/20">CERTIFIED</span>
+        <section id="certs-pin-container" class="h-[100svh] w-full flex flex-col items-center justify-center overflow-hidden bg-transparent relative border-t border-zinc-900 px-4 sm:px-6">
+            
+            <div class="w-full max-w-6xl mx-auto absolute top-[5%] lg:top-[8%] 2xl:top-[10%] z-[100]">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-mono text-white border-l-4 border-fuchsia-600 pl-4 sm:pl-6 drop-shadow-xl">./CERTIFICATIONS</h2>
             </div>
-            <img src="/images/netplus.png" alt="Net+ Badge" class="w-14 h-14 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_0_15px_rgba(139,92,246,0.8)] transition-all duration-500" />
-        </div>
-        <div class="w-full bg-zinc-800 rounded-full h-1 mb-2 relative z-10">
-            <div class="bg-violet-600 h-1 rounded-full shadow-[0_0_10px_rgba(139,92,246,0.5)]" style="width: 100%"></div>
-        </div>
-        <p class="text-zinc-400 text-sm relative z-10">TCP/IP, DNS/DHCP, Subnetting, VLANs, Routing protocols & Network troubleshooting.</p>
-    </div>
+            
+            <div class="relative w-full max-w-[320px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[700px] 2xl:max-w-[800px] h-[450px] sm:h-[400px] md:h-[350px] lg:h-[380px] 2xl:h-[420px] mt-10 lg:mt-16 perspective-1000">
+                
+                <div class="cert-card absolute inset-0 p-6 lg:p-8 2xl:p-10 rounded-3xl bg-[#131316] border border-zinc-800 border-t-red-600 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-[10]">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white font-mono mb-2">CompTIA A+</h3>
+                            <span class="inline-block px-2 lg:px-3 py-1 bg-red-950 text-red-300 text-[10px] lg:text-xs rounded font-mono border border-red-500/20">CERTIFIED</span>
+                        </div>
+                        <img src="/images/aplus.png" alt="A+" class="w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="w-full bg-zinc-800 rounded-full h-1 lg:h-1.5 mt-4 lg:mt-6 mb-auto"><div class="bg-red-500 h-1 lg:h-1.5 rounded-full w-full"></div></div>
+                    <p class="text-zinc-300 text-sm lg:text-base 2xl:text-lg leading-relaxed mt-4 lg:mt-6">
+                        <strong class="text-white">Core IT Infrastructure:</strong> Hardware configuration, OS Troubleshooting (Windows/Linux/macOS), and Helpdesk methodologies. Mastery of peripheral setups, basic networking protocols, and enterprise mobile device provisioning.
+                    </p>
+                </div>
 
-    <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-orange-500 transition-all group relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4 relative z-10">
-            <div>
-                <h3 class="text-lg font-bold text-white group-hover:text-orange-400 font-mono">CompTIA Security+</h3>
-                <span class="inline-block mt-1 px-2 py-1 bg-orange-950 text-orange-300 text-[10px] rounded font-mono border border-orange-500/20">CERTIFIED</span>
+                <div class="cert-card absolute inset-0 p-6 lg:p-8 2xl:p-10 rounded-3xl bg-[#131316] border border-zinc-800 border-t-violet-600 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-[20]">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white font-mono mb-2">CompTIA Network+</h3>
+                            <span class="inline-block px-2 lg:px-3 py-1 bg-violet-950 text-violet-300 text-[10px] lg:text-xs rounded font-mono border border-violet-500/20">CERTIFIED</span>
+                        </div>
+                        <img src="/images/netplus.png" alt="Net+" class="w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="w-full bg-zinc-800 rounded-full h-1 lg:h-1.5 mt-4 lg:mt-6 mb-auto"><div class="bg-violet-600 h-1 lg:h-1.5 rounded-full w-full"></div></div>
+                    <p class="text-zinc-300 text-sm lg:text-base 2xl:text-lg leading-relaxed mt-4 lg:mt-6">
+                        <strong class="text-white">Network Architecture:</strong> Deep understanding of the OSI model, TCP/IP stack, and routing protocols. Proficient in designing VLANs, configuring DNS/DHCP, physical cabling standards, and executing network troubleshooting.
+                    </p>
+                </div>
+
+                <div class="cert-card absolute inset-0 p-6 lg:p-8 2xl:p-10 rounded-3xl bg-[#131316] border border-zinc-800 border-t-orange-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-[30]">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white font-mono mb-2">CompTIA Security+</h3>
+                            <span class="inline-block px-2 lg:px-3 py-1 bg-orange-950 text-orange-300 text-[10px] lg:text-xs rounded font-mono border border-orange-500/20">CERTIFIED</span>
+                        </div>
+                        <img src="/images/secplus.png" alt="Sec+" class="w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="w-full bg-zinc-800 rounded-full h-1 lg:h-1.5 mt-4 lg:mt-6 mb-auto"><div class="bg-orange-500 h-1 lg:h-1.5 rounded-full w-full"></div></div>
+                    <p class="text-zinc-300 text-sm lg:text-base 2xl:text-lg leading-relaxed mt-4 lg:mt-6">
+                        <strong class="text-white">Cybersecurity Foundations:</strong> Applied threat analysis, risk mitigation, and Incident Response. Knowledge of cryptography (PKI), Zero-Trust architecture, identity management, and compliance frameworks (GDPR/HIPAA).
+                    </p>
+                </div>
+
+                <div class="cert-card absolute inset-0 p-6 lg:p-8 2xl:p-10 rounded-3xl bg-[#131316] border border-zinc-800 border-t-blue-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-[40]">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white font-mono mb-2">Microsoft 365 (MS-900)</h3>
+                            <span class="inline-block px-2 lg:px-3 py-1 bg-blue-950 text-blue-300 text-[10px] lg:text-xs rounded font-mono border border-blue-500/20">CERTIFIED</span>
+                        </div>
+                        <img src="/images/ms900.png" alt="MS-900" class="w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="w-full bg-zinc-800 rounded-full h-1 lg:h-1.5 mt-4 lg:mt-6 mb-auto"><div class="bg-blue-500 h-1 lg:h-1.5 rounded-full w-full"></div></div>
+                    <p class="text-zinc-300 text-sm lg:text-base 2xl:text-lg leading-relaxed mt-4 lg:mt-6">
+                        <strong class="text-white">Cloud Fundamentals:</strong> Navigation of the Microsoft 365 ecosystem, differentiating SaaS/PaaS/IaaS solutions. Foundational knowledge of Entra ID authentication, cloud deployment models, and enterprise licensing.
+                    </p>
+                </div>
+
+                <div class="cert-card absolute inset-0 p-6 lg:p-8 2xl:p-10 rounded-3xl bg-[#131316] border border-zinc-800 border-t-cyan-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-[50]">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white font-mono mb-2">Azure Fund. (AZ-900)</h3>
+                            <span class="inline-block px-2 lg:px-3 py-1 bg-cyan-950 text-cyan-300 text-[10px] lg:text-xs rounded font-mono border border-cyan-500/20">CERTIFIED</span>
+                        </div>
+                        <img src="/images/az900.png" alt="AZ-900" class="w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="w-full bg-zinc-800 rounded-full h-1 lg:h-1.5 mt-4 lg:mt-6 mb-auto"><div class="bg-cyan-500 h-1 lg:h-1.5 rounded-full w-full"></div></div>
+                    <p class="text-zinc-300 text-sm lg:text-base 2xl:text-lg leading-relaxed mt-4 lg:mt-6">
+                        <strong class="text-white">Azure Architecture:</strong> Core concepts of Azure Virtual Machines, Resource Groups, and Cloud Networking. Understanding of Azure Policies, cost management, and scaling enterprise infrastructure.
+                    </p>
+                </div>
+
+                <div class="cert-card absolute inset-0 p-6 lg:p-8 2xl:p-10 rounded-3xl bg-[#131316] border border-zinc-800 border-t-emerald-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col z-[60]">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white font-mono mb-2">Endpoint Admin (MD-102)</h3>
+                            <span class="inline-block px-2 lg:px-3 py-1 bg-emerald-950/50 text-emerald-400 text-[10px] lg:text-xs rounded font-mono border border-emerald-500/30 animate-pulse">IN PROGRESS</span>
+                        </div>
+                        <img src="/images/md102.png" alt="MD-102" class="w-12 h-12 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain opacity-80" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="w-full bg-zinc-800 rounded-full h-1 lg:h-1.5 mt-4 lg:mt-6 mb-auto"><div class="bg-emerald-500 h-1 lg:h-1.5 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)] w-1/4"></div></div>
+                    <p class="text-zinc-300 text-sm lg:text-base 2xl:text-lg leading-relaxed mt-4 lg:mt-6">
+                        <strong class="text-white">Modern Device Management:</strong> Advanced configuration of Windows Autopilot and Microsoft Intune. Implementation of RBAC, Mobile Device Management (MDM vs MAM), and Defender for Endpoint.
+                    </p>
+                </div>
+
             </div>
-            <img src="/images/secplus.png" alt="Sec+ Badge" class="w-14 h-14 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_0_15px_rgba(249,115,22,0.8)] transition-all duration-500" />
-        </div>
-        <div class="w-full bg-zinc-800 rounded-full h-1 mb-2 relative z-10">
-            <div class="bg-orange-500 h-1 rounded-full shadow-[0_0_10px_rgba(249,115,22,0.5)]" style="width: 100%"></div>
-        </div>
-        <p class="text-zinc-400 text-sm relative z-10">Threat Analysis, Risk Management, Cryptography, Incident Response & Security Architecture.</p>
-    </div>
+        </section>
 
-    <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-blue-500 transition-all group relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4 relative z-10">
-            <div>
-                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 font-mono">Microsoft MS-900</h3>
-                <span class="inline-block mt-1 px-2 py-1 bg-blue-950 text-blue-300 text-[10px] rounded font-mono border border-blue-500/20">CERTIFIED</span>
-            </div>
-            <img src="/images/ms900.png" alt="MS-900 Badge" class="w-14 h-14 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.8)] transition-all duration-500" />
-        </div>
-        <div class="w-full bg-zinc-800 rounded-full h-1 mb-2 relative z-10">
-            <div class="bg-blue-500 h-1 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]" style="width: 100%"></div>
-        </div>
-        <p class="text-zinc-400 text-sm relative z-10">Microsoft 365 Ecosystem, Cloud Concepts, Entra ID Authentication & Endpoint Management.</p>
-    </div>
-
-    <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500 transition-all group relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4 relative z-10">
-            <div>
-                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 font-mono">Microsoft AZ-900</h3>
-                <span class="inline-block mt-1 px-2 py-1 bg-cyan-950 text-cyan-300 text-[10px] rounded font-mono border border-cyan-500/20">CERTIFIED</span>
-            </div>
-            <img src="/images/az900.png" alt="AZ-900 Badge" class="w-14 h-14 object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.8)] transition-all duration-500" />
-        </div>
-        <div class="w-full bg-zinc-800 rounded-full h-1 mb-2 relative z-10">
-            <div class="bg-cyan-500 h-1 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]" style="width: 100%"></div>
-        </div>
-        <p class="text-zinc-400 text-sm relative z-10">Azure Architecture, Virtual Machines, Cloud Networking & IaaS/PaaS Core Concepts.</p>
-    </div>
-
-    <div class="p-6 rounded bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500 transition-all group relative overflow-hidden">
-        <div class="flex items-center justify-between mb-4 relative z-10">
-            <div>
-                <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 font-mono">Microsoft MD-102</h3>
-                <span class="inline-block mt-1 px-2 py-1 bg-emerald-950/50 text-emerald-400 text-[10px] rounded font-mono border border-emerald-500/30 animate-pulse">IN PROGRESS</span>
-            </div>
-            <img src="/images/md102.png" alt="MD-102 Badge" class="w-14 h-14 object-contain grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-500" />
-        </div>
-        <div class="w-full bg-zinc-800 rounded-full h-1 mb-2 relative z-10">
-            <div class="bg-emerald-500 h-1 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.5)]" style="width: 25%"></div>
-        </div>
-        <p class="text-zinc-400 text-sm relative z-10">Endpoint Administrator: Windows Client, Intune, Autopilot & Microsoft 365 Device Management.</p>
-    </div>
-
-</div>
-
-    </div>
-</section>
-
-        <footer class="text-center text-zinc-600 text-[10px] font-mono py-20 border-t border-zinc-900">
+        <footer class="text-center text-zinc-600 text-xs sm:text-sm font-mono py-16 sm:py-24 bg-transparent relative z-[100]">
             <p>echo "Alex @ Saigon"; // GMT+7 Strategic Base</p>
         </footer>
+
+        <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[150] p-3 md:p-4 rounded-full bg-zinc-900 border border-zinc-700 text-zinc-400 hover:bg-fuchsia-600 hover:text-white hover:border-fuchsia-500 hover:shadow-[0_0_20px_rgba(217,70,239,0.5)] transition-all duration-300 opacity-0 translate-y-10 pointer-events-none backdrop-blur-md group">
+            <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+        </button>
 
     </main>
 </Layout>
 
 <script is:inline>
+    // 1. SATOVI
     function updateClocks() {
         const fmt = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-        document.getElementById('vn-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Asia/Ho_Chi_Minh' });
-        document.getElementById('nyc-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'America/New_York' });
-        document.getElementById('ldn-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Europe/London' });
-        document.getElementById('syd-time').textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Australia/Sydney' });
+        const vnEl = document.getElementById('vn-time');
+        const nycEl = document.getElementById('nyc-time');
+        const ldnEl = document.getElementById('ldn-time');
+        const sydEl = document.getElementById('syd-time');
+        
+        if(vnEl) vnEl.textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Asia/Ho_Chi_Minh' });
+        if(nycEl) nycEl.textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'America/New_York' });
+        if(ldnEl) ldnEl.textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Europe/London' });
+        if(sydEl) sydEl.textContent = new Date().toLocaleTimeString('en-GB', { ...fmt, timeZone: 'Australia/Sydney' });
     }
     setInterval(updateClocks, 1000);
     updateClocks();
+
+    // 2. GSAP MAESTRO LOGIKA
+    document.addEventListener("DOMContentLoaded", () => {
+        if(typeof gsap !== 'undefined') {
+            
+            // REGISTRACIJA OBA PLUGINA (ScrollTrigger za animacije, ScrollTo za dugme)
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+            // --- BACK TO TOP LOGIKA ---
+            const bttButton = document.getElementById('back-to-top');
+            if (bttButton) {
+                // Pojavljivanje na skrol
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 600) {
+                        bttButton.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        bttButton.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                    } else {
+                        bttButton.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        bttButton.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                    }
+                });
+
+                // GSAP Cinematic skrol na vrh kad se klikne
+                bttButton.addEventListener('click', () => {
+                    gsap.to(window, { duration: 1.5, scrollTo: 0, ease: "power3.inOut" });
+                });
+            }
+            // --------------------------
+
+            // A. Učitavanje stranice
+            gsap.to(".gsap-header", { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+            gsap.to("#hero-section", { opacity: 1, duration: 1.5, ease: "power2.out", delay: 0.5 });
+
+            // B. Hero -> Incident Response (Pin & Scale)
+            const tlHeroIR = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#hero-ir-container",
+                    start: "top top",
+                    end: "+=150%", 
+                    scrub: 1, 
+                    pin: true 
+                }
+            });
+            tlHeroIR.to("#hero-section", { opacity: 0, scale: 0.9, duration: 1 })
+                    .to("#ir-section", { opacity: 1, scale: 1, pointerEvents: "auto", duration: 1.5 }, "-=0.5");
+
+            // C. Home Labs
+            const labsTrack = document.getElementById('labs-track');
+            if(labsTrack) {
+                let labsTween = gsap.to(labsTrack, {
+                    x: () => -(labsTrack.scrollWidth - window.innerWidth),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "#labs-pin-container",
+                        start: "top top",
+                        end: () => `+=${labsTrack.scrollWidth}`,
+                        scrub: 1,
+                        pin: true,
+                        invalidateOnRefresh: true
+                    }
+                });
+
+                gsap.utils.toArray('.lab-card').forEach(card => {
+                    const tlCard = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: card,
+                            containerAnimation: labsTween,
+                            start: "left 95%", 
+                            end: "right 5%",   
+                            scrub: true
+                        }
+                    });
+
+                    tlCard.fromTo(card, 
+                        { opacity: 0, scale: 0.75 }, 
+                        { opacity: 1, scale: 1, duration: 0.2, ease: "power2.out" } 
+                    )
+                    .to(card, 
+                        { opacity: 1, scale: 1, duration: 0.6 } 
+                    )
+                    .to(card, 
+                        { opacity: 0, scale: 0.75, duration: 0.2, ease: "power2.in" } 
+                    );
+                });
+            }
+
+            // D. Technical Skills
+            const tlTerminal = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#skills-pin-container",
+                    start: "top top",
+                    end: "+=400%", 
+                    scrub: 1,
+                    pin: true,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            tlTerminal.to(".sys-line", { opacity: 1, stagger: 0.1, ease: "none" });
+            tlTerminal.to(".sys-clear", { opacity: 1, duration: 0.2 }, "+=0.2");
+            tlTerminal.to("#term-group-1", { opacity: 0, duration: 0.01 }, "+=0.2")
+                      .to("#term-group-2", { opacity: 1, duration: 0.01 }, "<");
+            tlTerminal.to(".tool-line", { opacity: 1, stagger: 0.1, ease: "none" });
+
+            // E. BPA Solutions
+            const bpaTrack = document.getElementById('bpa-cards-track');
+            if (bpaTrack) {
+                const tlBpa = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#bpa-section",
+                        start: "top top",
+                        end: "+=300%", 
+                        scrub: 1,
+                        pin: true,
+                        invalidateOnRefresh: true,
+                        onEnter: () => { gsap.to(".blob-1", { backgroundColor: "#10b981", opacity: 0.15, duration: 1 }); },
+                        onLeave: () => { gsap.to(".blob-1", { backgroundColor: "#c026d3", opacity: 0.2, duration: 1 }); },
+                        onEnterBack: () => { gsap.to(".blob-1", { backgroundColor: "#10b981", opacity: 0.15, duration: 1 }); },
+                        onLeaveBack: () => { gsap.to(".blob-1", { backgroundColor: "#c026d3", opacity: 0.2, duration: 1 }); }
+                    }
+                });
+
+                tlBpa.to(".bpa-intro-text", { opacity: 1, y: 0, duration: 0.4 }, 0);
+                tlBpa.to(bpaTrack, {
+                    y: () => -(bpaTrack.scrollHeight - window.innerHeight * 0.7),
+                    ease: "none",
+                    duration: 2
+                }, 0.5); 
+            }
+
+            // F. Certificates
+            const certCards = gsap.utils.toArray('.cert-card');
+            if(certCards.length > 0) {
+                gsap.set(certCards, { y: window.innerHeight, opacity: 0 });
+                gsap.set(certCards[0], { y: 0, opacity: 1 });
+
+                const tlCerts = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#certs-pin-container",
+                        start: "top top",
+                        end: "+=" + (certCards.length * 60) + "%", 
+                        scrub: 1,
+                        pin: true,
+                        invalidateOnRefresh: true
+                    }
+                });
+
+                certCards.forEach((card, index) => {
+                    if (index === 0) return; 
+
+                    tlCerts.to(certCards.slice(0, index), {
+                        y: (i) => -35 * (index - i), 
+                        scale: (i) => 1 - 0.05 * (index - i), 
+                        duration: 1,
+                        ease: "power2.out"
+                    }, index);
+
+                    tlCerts.to(card, { y: 0, opacity: 1, duration: 1, ease: "power2.out" }, index);
+                });
+            }
+
+            // Parallax blurevi u pozadini
+            gsap.to(".blob-1", { yPercent: 100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
+            gsap.to(".blob-2", { yPercent: -100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
+        }
+    });
 </script>
