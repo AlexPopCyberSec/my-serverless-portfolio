@@ -381,27 +381,28 @@ import Layout from '../layouts/Layout.astro';
     setInterval(updateClocks, 1000);
     updateClocks();
 
-// --- LENIS SMOOTH SCROLL ---
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    smooth: true,
-    smoothTouch: false, // Ostavljamo native skrol za mobilni radi boljeg osećaja pod prstom
-});
+    // --- LENIS MASTER SYNC (Awwwards Standard) ---
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        smooth: true,
+        smoothTouch: false, // Ostavljamo native skrol za mobilni
+    });
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-// ---------------------------
+    // KLJUČNO: Vezujemo Lenis za ScrollTrigger da tekst ne bi nestajao
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+    // ---------------------------------------------
 
     // 2. GSAP MAESTRO LOGIKA
     document.addEventListener("DOMContentLoaded", () => {
         if(typeof gsap !== 'undefined') {
             
-            // REGISTRACIJA OBA PLUGINA (ScrollTrigger za animacije, ScrollTo za dugme)
+            // REGISTRACIJA OBA PLUGINA
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
             // --- BACK TO TOP LOGIKA ---
@@ -518,8 +519,15 @@ requestAnimationFrame(raf);
                     }
                 });
 
+                // POPRAVLJENO: fromTo umesto to komande za tekst, da se uvek pojavi
+                tlBpa.fromTo(".bpa-intro-text", 
+                    { opacity: 0, y: 20 }, 
+                    { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 
+                    0 
+                );
+
+                // POPRAVLJENO: Tvoja popravljena računica za visinu kontejnera!
                 tlBpa.to(bpaTrack, {
-                    // Racuna tacnu visinu kontejnera da bi uvek pokazao poslednju karticu do kraja
                     y: () => -(bpaTrack.scrollHeight - bpaTrack.parentElement.offsetHeight),
                     ease: "none",
                     duration: 2
@@ -560,6 +568,9 @@ requestAnimationFrame(raf);
             // Parallax blurevi u pozadini
             gsap.to(".blob-1", { yPercent: 100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
             gsap.to(".blob-2", { yPercent: -100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
+
+            // Forsira osvežavanje pozicija nakon što se sve poveže
+            ScrollTrigger.refresh();
         }
     });
 </script>
