@@ -4,9 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Alex | IT, CyberSec & BPA">
     
-    <header class="w-full max-w-6xl mx-auto px-4 md:px-6 pt-6 md:pt-10 2xl:pt-12 relative z-50">
+    <header class="w-full max-w-7xl mx-auto px-6 pt-6 md:pt-10 2xl:pt-12 relative z-50">
         <div class="flex flex-col xl:flex-row xl:items-center gap-4 md:gap-6 w-full gsap-header opacity-0 translate-y-[-20px]">
-            <div class="flex xl:inline-flex justify-center xl:justify-start items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-full xl:w-fit shadow-sm">
+            <div class="flex xl:inline-flex justify-start items-center gap-2 px-3 py-1.5 rounded-full bg-fuchsia-950/30 border border-fuchsia-500/30 text-fuchsia-400 text-[10px] md:text-xs font-mono w-full xl:w-fit shadow-sm">
                 <span class="relative flex h-2 w-2">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -30,32 +30,49 @@ import Layout from '../layouts/Layout.astro';
         
         <div id="hero-ir-container" class="relative w-full h-[100svh] overflow-hidden flex items-center justify-center">
             
-            <section id="hero-section" class="absolute inset-0 flex flex-col justify-center max-w-6xl mx-auto px-6 opacity-0 pb-16 lg:pb-12 2xl:pb-32">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl 2xl:text-9xl font-bold text-white tracking-tighter mb-4 lg:mb-6 2xl:mb-8 font-mono leading-none mt-10 md:mt-0">
-                    Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600 block sm:inline">Alex</span>.
-                </h1>
+            <section id="hero-section" class="absolute inset-0 flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto px-6 opacity-0 pb-16 lg:pb-12 2xl:pb-32 gap-8 lg:gap-12">
                 
-                <p class="text-lg md:text-xl lg:text-2xl 2xl:text-4xl text-zinc-400 mb-8 lg:mb-8 2xl:mb-12 max-w-4xl leading-relaxed">
-                    IT Infrastructure and Security Specialist. <br>
-                    <span class="text-zinc-500 text-sm md:text-base lg:text-lg 2xl:text-2xl mt-3 2xl:mt-4 block leading-relaxed">
-                        CompTIA Trifecta (A+, Network+, Security+) Certified professional with a focus on network security and cloud infrastructure. 
-                        I bridge the gap between deep infrastructure troubleshooting and clear end-user communication, ensuring every escalation is handled smoothly.
-                        <strong class="text-zinc-400 block mt-3 2xl:mt-4">Actively seeking MSP Support, Junior SysAdmin, & Cloud Infrastructure opportunities.</strong>
-                    </span>
-                </p>
+                <div class="w-full lg:w-3/5 flex flex-col justify-center z-10">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl 2xl:text-9xl font-bold text-white tracking-tighter mb-4 lg:mb-6 2xl:mb-8 font-mono leading-none mt-10 md:mt-0">
+                        Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600 block sm:inline">Alex</span>.
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl lg:text-2xl 2xl:text-4xl text-zinc-400 mb-8 lg:mb-8 2xl:mb-12 max-w-4xl leading-relaxed">
+                        IT Infrastructure and Security Specialist. <br>
+                        <span class="text-zinc-500 text-sm md:text-base lg:text-lg 2xl:text-2xl mt-3 2xl:mt-4 block leading-relaxed">
+                            CompTIA Trifecta (A+, Network+, Security+) Certified professional with a focus on network security and cloud infrastructure. 
+                            I bridge the gap between deep infrastructure troubleshooting and clear end-user communication, ensuring every escalation is handled smoothly.
+                            <strong class="text-zinc-400 block mt-3 2xl:mt-4">Actively seeking MSP Support, Junior SysAdmin, & Cloud Infrastructure opportunities.</strong>
+                        </span>
+                    </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 2xl:gap-6">
-                    <a href="mailto:aleksandar@alexpopov.tech" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-bold rounded-lg hover:shadow-[0_0_30px_rgba(217,70,239,0.5)] transition-all text-center">
-                        Contact Me
-                    </a>
-                    <a href="/CV-Public.pdf" target="_blank" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl border-2 border-zinc-700 hover:border-fuchsia-500 hover:text-fuchsia-400 text-zinc-300 rounded-lg transition-all text-center">
-                        Download CV
-                    </a>
-                    <a href="https://github.com/AlexPopCyberSec" target="_blank" aria-label="Visit my GitHub profile" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl border-2 border-zinc-700 hover:border-violet-500 hover:text-violet-400 text-zinc-300 rounded-lg transition-all flex items-center justify-center gap-2 2xl:gap-3 group">
-                        <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current text-zinc-500 group-hover:text-violet-500 transition-colors" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        <span>GitHub</span>
-                    </a>
+                    <div class="flex flex-col sm:flex-row gap-4 2xl:gap-6">
+                        <a href="mailto:aleksandar@alexpopov.tech" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-bold rounded-lg hover:shadow-[0_0_30px_rgba(217,70,239,0.5)] transition-all text-center">
+                            Contact Me
+                        </a>
+                        <a href="/CV-Public.pdf" target="_blank" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl border-2 border-zinc-700 hover:border-fuchsia-500 hover:text-fuchsia-400 text-zinc-300 rounded-lg transition-all text-center">
+                            Download CV
+                        </a>
+                        <a href="https://github.com/AlexPopCyberSec" target="_blank" aria-label="Visit my GitHub profile" class="px-6 2xl:px-10 py-3 2xl:py-5 text-base lg:text-lg 2xl:text-2xl border-2 border-zinc-700 hover:border-violet-500 hover:text-violet-400 text-zinc-300 rounded-lg transition-all flex items-center justify-center gap-2 2xl:gap-3 group">
+                            <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current text-zinc-500 group-hover:text-violet-500 transition-colors" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
                 </div>
+
+                <div class="w-full lg:w-2/5 flex justify-center lg:justify-end items-center relative mt-6 md:mt-10 lg:mt-0">
+                    <div class="absolute w-[140px] h-[140px] md:w-[220px] md:h-[220px] lg:w-[320px] lg:h-[320px] 2xl:w-[450px] 2xl:h-[450px] bg-fuchsia-600/30 rounded-full blur-[40px] md:blur-[50px] lg:blur-[60px] animate-pulse"></div>
+                    
+                    <div class="relative w-[140px] h-[140px] md:w-[220px] md:h-[220px] lg:w-[320px] lg:h-[320px] 2xl:w-[450px] 2xl:h-[450px] rounded-full p-[2px] lg:p-1 bg-gradient-to-br from-fuchsia-500 via-purple-600 to-zinc-900 shadow-[0_0_50px_rgba(217,70,239,0.3)] group cursor-pointer z-10">
+                        
+                        <div class="w-full h-full rounded-full overflow-hidden bg-zinc-950 relative border-[3px] md:border-4 border-zinc-900/50">
+                            <img src="/images/alex-profile.png" alt="Alex - Tech Specialist" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+                            
+                            <div class="absolute inset-0 rounded-full shadow-[inset_0_0_40px_rgba(217,70,239,0.2)] pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <section id="ir-section" class="absolute inset-0 flex items-center justify-center max-w-5xl mx-auto px-4 sm:px-6 opacity-0 scale-50 pointer-events-none">
@@ -381,29 +398,16 @@ import Layout from '../layouts/Layout.astro';
     setInterval(updateClocks, 1000);
     updateClocks();
 
-    // --- LENIS MASTER SYNC (OVERCLOCKED & SPEED UP) ---
-    const lenis = new Lenis({
-        duration: 1.1,        // Blago smanjeno trajanje klizanja za brži odziv
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        smoothWheel: true,
-        wheelMultiplier: 1.6, // Pojačava snagu skrola za 60% na lenjim drajverima/miševima
-        smoothTouch: false,
-        touchMultiplier: 2,   // Ubrzava skrol na laptop touchpad-ovima
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
-    // ---------------------------------------------
-
-    // 2. GSAP MAESTRO LOGIKA
+    // 2. GSAP MAESTRO LOGIKA (Čist Native Scroll)
     document.addEventListener("DOMContentLoaded", () => {
         if(typeof gsap !== 'undefined') {
             
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+            // Obavezno podešavanje da bi Native Scroll lepo radio sa pinovanjem
+            ScrollTrigger.config({ limitCallbacks: true });
+            // Ovo osigurava da se kalkulacije visine ne zaglupe
+            ScrollTrigger.normalizeScroll(false); 
 
             // --- BACK TO TOP LOGIKA ---
             const bttButton = document.getElementById('back-to-top');
@@ -433,7 +437,7 @@ import Layout from '../layouts/Layout.astro';
                 scrollTrigger: {
                     trigger: "#hero-ir-container",
                     start: "top top",
-                    end: "+=100%", // Smanjeno sa 150% -> Brži prelaz
+                    end: "+=100%", 
                     scrub: 1, 
                     pin: true 
                 }
@@ -450,7 +454,7 @@ import Layout from '../layouts/Layout.astro';
                     scrollTrigger: {
                         trigger: "#labs-pin-container",
                         start: "top top",
-                        end: () => `+=${labsTrack.scrollWidth * 0.8}`, // Smanjen i ovde otpor za 20%
+                        end: () => `+=${labsTrack.scrollWidth * 0.8}`, 
                         scrub: 1,
                         pin: true,
                         invalidateOnRefresh: true
@@ -486,7 +490,7 @@ import Layout from '../layouts/Layout.astro';
                 scrollTrigger: {
                     trigger: "#skills-pin-container",
                     start: "top top",
-                    end: "+=250%", // Smanjeno sa 400% -> Linije lete brže
+                    end: "+=250%", 
                     scrub: 1,
                     pin: true,
                     invalidateOnRefresh: true
@@ -506,7 +510,7 @@ import Layout from '../layouts/Layout.astro';
                     scrollTrigger: {
                         trigger: "#bpa-section",
                         start: "top top",
-                        end: "+=200%", // Smanjeno sa 300% -> Kartice idu brže gore
+                        end: "+=200%", 
                         scrub: 1,
                         pin: true,
                         invalidateOnRefresh: true,
@@ -540,7 +544,7 @@ import Layout from '../layouts/Layout.astro';
                     scrollTrigger: {
                         trigger: "#certs-pin-container",
                         start: "top top",
-                        end: "+=" + (certCards.length * 45) + "%", // Smanjeno sa 60% po kartici -> brže slaganje
+                        end: "+=" + (certCards.length * 45) + "%", 
                         scrub: 1,
                         pin: true,
                         invalidateOnRefresh: true
@@ -565,7 +569,6 @@ import Layout from '../layouts/Layout.astro';
             gsap.to(".blob-1", { yPercent: 100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
             gsap.to(".blob-2", { yPercent: -100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
 
-            // Forsira osvežavanje pozicija
             ScrollTrigger.refresh();
         }
     });
