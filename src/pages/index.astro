@@ -381,16 +381,17 @@ import Layout from '../layouts/Layout.astro';
     setInterval(updateClocks, 1000);
     updateClocks();
 
-    // --- LENIS MASTER SYNC (Awwwards Standard) ---
+    // --- LENIS MASTER SYNC (OVERCLOCKED & SPEED UP) ---
     const lenis = new Lenis({
-        duration: 1.2,
+        duration: 1.1,        // Blago smanjeno trajanje klizanja za brži odziv
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         direction: 'vertical',
-        smooth: true,
-        smoothTouch: false, // Ostavljamo native skrol za mobilni
+        smoothWheel: true,
+        wheelMultiplier: 1.6, // Pojačava snagu skrola za 60% na lenjim drajverima/miševima
+        smoothTouch: false,
+        touchMultiplier: 2,   // Ubrzava skrol na laptop touchpad-ovima
     });
 
-    // KLJUČNO: Vezujemo Lenis za ScrollTrigger da tekst ne bi nestajao
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
@@ -402,13 +403,11 @@ import Layout from '../layouts/Layout.astro';
     document.addEventListener("DOMContentLoaded", () => {
         if(typeof gsap !== 'undefined') {
             
-            // REGISTRACIJA OBA PLUGINA
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
             // --- BACK TO TOP LOGIKA ---
             const bttButton = document.getElementById('back-to-top');
             if (bttButton) {
-                // Pojavljivanje na skrol
                 window.addEventListener("scroll", () => {
                     if (window.scrollY > 600) {
                         bttButton.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
@@ -419,9 +418,8 @@ import Layout from '../layouts/Layout.astro';
                     }
                 });
 
-                // GSAP Cinematic skrol na vrh kad se klikne
                 bttButton.addEventListener('click', () => {
-                    gsap.to(window, { duration: 1.5, scrollTo: 0, ease: "power3.inOut" });
+                    gsap.to(window, { duration: 1.2, scrollTo: 0, ease: "power3.inOut" });
                 });
             }
             // --------------------------
@@ -430,12 +428,12 @@ import Layout from '../layouts/Layout.astro';
             gsap.to(".gsap-header", { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
             gsap.to("#hero-section", { opacity: 1, duration: 1.5, ease: "power2.out", delay: 0.5 });
 
-            // B. Hero -> Incident Response (Pin & Scale)
+            // B. Hero -> Incident Response (UBRZANO)
             const tlHeroIR = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#hero-ir-container",
                     start: "top top",
-                    end: "+=150%", 
+                    end: "+=100%", // Smanjeno sa 150% -> Brži prelaz
                     scrub: 1, 
                     pin: true 
                 }
@@ -452,7 +450,7 @@ import Layout from '../layouts/Layout.astro';
                     scrollTrigger: {
                         trigger: "#labs-pin-container",
                         start: "top top",
-                        end: () => `+=${labsTrack.scrollWidth}`,
+                        end: () => `+=${labsTrack.scrollWidth * 0.8}`, // Smanjen i ovde otpor za 20%
                         scrub: 1,
                         pin: true,
                         invalidateOnRefresh: true
@@ -483,32 +481,32 @@ import Layout from '../layouts/Layout.astro';
                 });
             }
 
-            // D. Technical Skills
+            // D. Technical Skills (UBRZANO)
             const tlTerminal = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#skills-pin-container",
                     start: "top top",
-                    end: "+=400%", 
+                    end: "+=250%", // Smanjeno sa 400% -> Linije lete brže
                     scrub: 1,
                     pin: true,
                     invalidateOnRefresh: true
                 }
             });
 
-            tlTerminal.to(".sys-line", { opacity: 1, stagger: 0.1, ease: "none" });
-            tlTerminal.to(".sys-clear", { opacity: 1, duration: 0.2 }, "+=0.2");
-            tlTerminal.to("#term-group-1", { opacity: 0, duration: 0.01 }, "+=0.2")
+            tlTerminal.to(".sys-line", { opacity: 1, stagger: 0.08, ease: "none" });
+            tlTerminal.to(".sys-clear", { opacity: 1, duration: 0.15 }, "+=0.15");
+            tlTerminal.to("#term-group-1", { opacity: 0, duration: 0.01 }, "+=0.15")
                       .to("#term-group-2", { opacity: 1, duration: 0.01 }, "<");
-            tlTerminal.to(".tool-line", { opacity: 1, stagger: 0.1, ease: "none" });
+            tlTerminal.to(".tool-line", { opacity: 1, stagger: 0.08, ease: "none" });
 
-            // E. BPA Solutions
+            // E. BPA Solutions (UBRZANO)
             const bpaTrack = document.getElementById('bpa-cards-track');
             if (bpaTrack) {
                 const tlBpa = gsap.timeline({
                     scrollTrigger: {
                         trigger: "#bpa-section",
                         start: "top top",
-                        end: "+=300%", 
+                        end: "+=200%", // Smanjeno sa 300% -> Kartice idu brže gore
                         scrub: 1,
                         pin: true,
                         invalidateOnRefresh: true,
@@ -519,22 +517,20 @@ import Layout from '../layouts/Layout.astro';
                     }
                 });
 
-                // POPRAVLJENO: fromTo umesto to komande za tekst, da se uvek pojavi
                 tlBpa.fromTo(".bpa-intro-text", 
                     { opacity: 0, y: 20 }, 
-                    { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 
+                    { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 
                     0 
                 );
 
-                // POPRAVLJENO: Tvoja popravljena računica za visinu kontejnera!
                 tlBpa.to(bpaTrack, {
                     y: () => -(bpaTrack.scrollHeight - bpaTrack.parentElement.offsetHeight),
                     ease: "none",
                     duration: 2
-                }, 0.5);
+                }, 0.4);
             }
 
-            // F. Certificates
+            // F. Certificates (UBRZANO)
             const certCards = gsap.utils.toArray('.cert-card');
             if(certCards.length > 0) {
                 gsap.set(certCards, { y: window.innerHeight, opacity: 0 });
@@ -544,7 +540,7 @@ import Layout from '../layouts/Layout.astro';
                     scrollTrigger: {
                         trigger: "#certs-pin-container",
                         start: "top top",
-                        end: "+=" + (certCards.length * 60) + "%", 
+                        end: "+=" + (certCards.length * 45) + "%", // Smanjeno sa 60% po kartici -> brže slaganje
                         scrub: 1,
                         pin: true,
                         invalidateOnRefresh: true
@@ -569,7 +565,7 @@ import Layout from '../layouts/Layout.astro';
             gsap.to(".blob-1", { yPercent: 100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
             gsap.to(".blob-2", { yPercent: -100, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: 1 } });
 
-            // Forsira osvežavanje pozicija nakon što se sve poveže
+            // Forsira osvežavanje pozicija
             ScrollTrigger.refresh();
         }
     });
